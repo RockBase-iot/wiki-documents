@@ -1,82 +1,31 @@
-# Website
+# The RockBase IoT Wiki Files Management Platform
+
+RockBase IoT has dedicated to making industrial IoT stable, secure and scalable. This is an open platform collecting all the wikis published by RockBase IoT, to show you the full picture of our efforts, natural environments digitization and outcome production.
+
+This is the Github source files for RockBase IoT.
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-## Installation
+## What will the Wiki Platform be used for?
 
-```bash
-yarn
-```
+This platform will host all the wikis published by RockBase IoT, including but not limited to:
+- Product documentation
+- User guides
+- API references
+- Tutorials
+- Release notes
+- FAQs
+- Troubleshooting guides
 
-## Local Development
 
-```bash
-yarn start
-```
+## Tech Support & Product Feedback
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Thank you for choosing our products! We provide many forms of support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-## i18n Local Test
+ - 📧 **Email** : support@rockbaseiot.com
+ - 🤖 **Telegram** : [t.me/rockbase_iot](https://t.me/rockbase_iot)
+ - 🌐 **Reddit** : [r/RockBase_IoT](https://www.reddit.com/r/RockBase_IoT/)
 
-Docusaurus `start` mode serves one locale at a time. If default locale is `en`, visiting `/zh/...` in dev mode can show 404.
+## Contributing to the Wiki
 
-Use locale-specific dev commands:
-
-```bash
-npm run start:en
-npm run start:zh
-```
-
-To validate both locales exactly like production, use:
-
-```bash
-npm run serve:all
-```
-
-Then test:
-- `/`
-- `/docs/products/nm-cyd-c5/`
-- `/zh/`
-- `/zh/docs/products/nm-cyd-c5/`
-
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-### GitHub Actions (Recommended)
-
-This repository includes [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) for automatic deployment.
-
-1. In GitHub repository settings, open **Settings -> Pages**.
-2. Set **Build and deployment** source to **GitHub Actions**.
-3. Push to the `main` branch to trigger automatic build and deployment.
-
-By default, CI builds for GitHub Pages project path:
-- `DOCUSAURUS_URL=https://<owner>.github.io`
-- `DOCUSAURUS_BASE_URL=/<repo>/`
-
-If you use a custom domain (for example `https://wiki.rockbaseiot.com`), add repository variables in **Settings -> Secrets and variables -> Actions -> Variables**:
-- `DOCUSAURUS_URL=https://wiki.rockbaseiot.com`
-- `DOCUSAURUS_BASE_URL=/`
-
-### Manual Deployment (Docusaurus CLI)
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+We welcome contributions to our wiki! If you have suggestions for improvements, new content, or corrections, please feel free to contribute. You can submit a pull request on our GitHub repository: [RockBase IoT Wiki](https://github.com/RockBase-iot/wiki-documents)
