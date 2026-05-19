@@ -1,0 +1,38 @@
+{
+  "homepage.tagline": {
+    "message": "开发者文档与产品知识库",
+    "description": "Homepage tagline/subtitle"
+  },
+  "homepage.startButton": {
+    "message": "开始探索文档 →",
+    "description": "Homepage CTA button"
+  },
+  "homepage.description": {
+    "message": "RockBase IoT 开发者文档与产品知识库",
+    "description": "Homepage meta description"
+  },
+  "homepage.feature.hardware.title": {
+    "message": "硬件产品",
+    "description": "Homepage feature 1 title"
+  },
+  "homepage.feature.hardware.desc": {
+    "message": "ESP32 系列核心板、射频扩展模块与触控显示屏，覆盖物联网全场景需求。",
+    "description": "Homepage feature 1 description"
+  },
+  "homepage.feature.dev.title": {
+    "message": "开发指南",
+    "description": "Homepage feature 2 title"
+  },
+  "homepage.feature.dev.desc": {
+    "message": "MicroPython、Arduino、ESP-IDF 三种开发方式，从入门到进阶的完整教程。",
+    "description": "Homepage feature 2 description"
+  },
+  "homepage.feature.eco.title": {
+    "message": "开源生态",
+    "description": "Homepage feature 3 title"
+  },
+  "homepage.feature.eco.desc": {
+    "message": "基于 GitHub 的开源项目与社区贡献，共享固件、案例与最佳实践。",
+    "description": "Homepage feature 3 description"
+  }
+}

@@ -1,0 +1,37 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100%;
+  background-color: var(--rb-rock-dark);
+}
+
+.featureCard {
+  background: rgba(37, 47, 56, 0.6);
+  border: 1px solid rgba(0, 148, 148, 0.15);
+  border-radius: var(--ifm-global-radius);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.featureCard:hover {
+  border-color: rgba(0, 148, 148, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 148, 148, 0.1);
+  transform: translateY(-4px);
+}
+
+.featureTitle {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+  color: var(--rb-tech-silver);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.featureDesc {
+  color: var(--ifm-font-color-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "RockBase IoT",
+    "description": "The title in the navbar"
+  },
+  "item.label.Docs": {
+    "message": "文档",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Products": {
+    "message": "产品",
+    "description": "Navbar item with label Products"
+  },
+  "item.label.Developer": {
+    "message": "开发者",
+    "description": "Navbar item with label Developer"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.返回官网": {
+    "message": "返回官网",
+    "description": "Navbar item with label 返回官网"
+  }
+}

@@ -1,0 +1,343 @@
+/* RockBase IoT VI System — Industrial Tech Brutalism */
+
+:root {
+  /* Brand Colors */
+  --rb-rock-dark: #252F38;
+  --rb-base-cyan: #009494;
+  --rb-base-cyan-dark: #008484;
+  --rb-base-cyan-darker: #007c7c;
+  --rb-base-cyan-darkest: #006767;
+  --rb-base-cyan-light: #00a4a4;
+  --rb-base-cyan-lighter: #00acac;
+  --rb-base-cyan-lightest: #00c1c1;
+  --rb-tech-silver: #E1E4E8;
+  --rb-alert-orange: #FF7E67;
+
+  /* Infima Override */
+  --ifm-color-primary: var(--rb-base-cyan);
+  --ifm-color-primary-dark: var(--rb-base-cyan-dark);
+  --ifm-color-primary-darker: var(--rb-base-cyan-darker);
+  --ifm-color-primary-darkest: var(--rb-base-cyan-darkest);
+  --ifm-color-primary-light: var(--rb-base-cyan-light);
+  --ifm-color-primary-lighter: var(--rb-base-cyan-lighter);
+  --ifm-color-primary-lightest: var(--rb-base-cyan-lightest);
+
+  --ifm-background-color: var(--rb-rock-dark);
+  --ifm-background-surface-color: #1a2229;
+  --ifm-font-color-base: var(--rb-tech-silver);
+  --ifm-font-color-secondary: #a0a8b0;
+  --ifm-font-color-inverse: var(--rb-rock-dark);
+
+  --ifm-navbar-background-color: rgba(37, 47, 56, 0.95);
+  --ifm-navbar-link-color: var(--rb-tech-silver);
+  --ifm-navbar-link-hover-color: var(--rb-base-cyan);
+  --ifm-navbar-link-active-color: var(--rb-base-cyan);
+
+  --ifm-footer-background-color: #1a2229;
+  --ifm-footer-color: var(--rb-tech-silver);
+  --ifm-footer-link-color: var(--rb-tech-silver);
+  --ifm-footer-link-hover-color: var(--rb-base-cyan);
+
+  --ifm-card-background-color: rgba(37, 47, 56, 0.8);
+  --ifm-color-emphasis-200: rgba(0, 148, 148, 0.2);
+  --ifm-color-emphasis-300: rgba(0, 148, 148, 0.3);
+  --ifm-color-warning: var(--rb-alert-orange);
+
+  --ifm-global-radius: 0.75rem;
+  --ifm-code-background: #1a2229;
+  --ifm-code-color: var(--rb-base-cyan-lightest);
+
+  --ifm-menu-color: var(--rb-tech-silver);
+  --ifm-menu-color-active: var(--rb-base-cyan);
+  --ifm-menu-color-background-active: rgba(0, 148, 148, 0.1);
+
+  --ifm-link-color: var(--rb-base-cyan);
+  --ifm-link-hover-color: var(--rb-base-cyan-lightest);
+
+  --ifm-button-background-color: var(--rb-base-cyan);
+  --ifm-button-color: var(--rb-rock-dark);
+
+  --ifm-font-family-base: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', monospace;
+  --ifm-heading-font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--rb-rock-dark);
+  color: var(--rb-tech-silver);
+}
+
+/* ========== .rb-noise — 多层径向渐变光晕背景 ========== */
+.rb-noise {
+  position: relative;
+  background-color: var(--rb-rock-dark);
+  overflow: hidden;
+}
+
+.rb-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(0, 148, 148, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 80% 70%, rgba(255, 126, 103, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 50% at 50% 50%, rgba(0, 148, 148, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.rb-noise > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== .rb-grid — 72px 科技网格线 ========== */
+.rb-grid {
+  position: relative;
+  background-color: var(--rb-rock-dark);
+}
+
+.rb-grid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 148, 148, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 148, 148, 0.06) 1px, transparent 1px);
+  background-size: 72px 72px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.rb-grid > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== .rb-diagonal — 斜切多边形过渡 ========== */
+.rb-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+/* ========== .rb-focus — 统一焦点环样式 ========== */
+.rb-focus:focus-visible,
+*:focus-visible {
+  outline: 2px solid var(--rb-base-cyan);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ========== Docusaurus Component Overrides ========== */
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 148, 148, 0.15);
+  box-shadow: none;
+}
+
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.navbar__link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: var(--rb-base-cyan);
+}
+
+.navbar__link--active {
+  color: var(--rb-base-cyan);
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid rgba(0, 148, 148, 0.1);
+}
+
+.footer__link-item:hover {
+  color: var(--rb-base-cyan);
+}
+
+/* Sidebar */
+.menu {
+  font-weight: 400;
+}
+
+.menu__link {
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.menu__link:hover {
+  background-color: rgba(0, 148, 148, 0.08);
+}
+
+.menu__link--active {
+  background-color: var(--ifm-menu-color-background-active);
+  color: var(--rb-base-cyan);
+  font-weight: 600;
+}
+
+/* Doc content */
+.theme-doc-markdown h1,
+.theme-doc-markdown h2,
+.theme-doc-markdown h3,
+.theme-doc-markdown h4 {
+  font-family: var(--ifm-heading-font-family);
+  color: var(--rb-tech-silver);
+}
+
+.theme-doc-markdown h1 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.theme-doc-markdown h2 {
+  font-weight: 700;
+  border-bottom: 1px solid rgba(0, 148, 148, 0.15);
+  padding-bottom: 0.5rem;
+}
+
+.theme-doc-markdown a {
+  color: var(--rb-base-cyan);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.theme-doc-markdown a:hover {
+  border-bottom-color: var(--rb-base-cyan);
+}
+
+/* Code blocks */
+.theme-code-block {
+  border-radius: var(--ifm-global-radius);
+  border: 1px solid rgba(0, 148, 148, 0.15);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+pre code {
+  font-family: var(--ifm-font-family-monospace);
+}
+
+/* Inline code */
+code {
+  background-color: var(--ifm-code-background);
+  color: var(--ifm-code-color);
+  border: 1px solid rgba(0, 148, 148, 0.15);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  font-size: 0.875em;
+}
+
+/* Cards / Admonitions */
+.theme-admonition {
+  border-radius: var(--ifm-global-radius);
+  border-left-width: 4px;
+}
+
+.theme-admonition-tip {
+  border-left-color: var(--rb-base-cyan);
+  background-color: rgba(0, 148, 148, 0.08);
+}
+
+.theme-admonition-warning {
+  border-left-color: var(--rb-alert-orange);
+  background-color: rgba(255, 126, 103, 0.08);
+}
+
+.theme-admonition-danger {
+  border-left-color: #ff4d4f;
+  background-color: rgba(255, 77, 79, 0.08);
+}
+
+/* Breadcrumbs */
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--rb-base-cyan);
+}
+
+/* Pagination */
+.pagination-nav__link {
+  border: 1px solid rgba(0, 148, 148, 0.15);
+  border-radius: var(--ifm-global-radius);
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--rb-base-cyan);
+}
+
+/* Table of Contents */
+.table-of-contents__link:hover {
+  color: var(--rb-base-cyan);
+}
+
+.table-of-contents__link--active {
+  color: var(--rb-base-cyan);
+  font-weight: 600;
+}
+
+/* Hero section (homepage) */
+.hero {
+  background-color: transparent;
+}
+
+.hero__title {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 800;
+  color: var(--rb-tech-silver);
+}
+
+.hero__subtitle {
+  color: var(--ifm-font-color-secondary);
+}
+
+.button--primary {
+  background-color: var(--rb-base-cyan);
+  border-color: var(--rb-base-cyan);
+  color: var(--rb-rock-dark);
+  font-weight: 600;
+}
+
+.button--primary:hover {
+  background-color: var(--rb-base-cyan-light);
+  border-color: var(--rb-base-cyan-light);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--rb-rock-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 148, 148, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 148, 148, 0.5);
+}
+
+/* DocPage container background */
+.main-wrapper {
+  background-color: var(--rb-rock-dark);
+}
+
+.theme-doc-sidebar-container {
+  background-color: var(--rb-rock-dark);
+  border-right: 1px solid rgba(0, 148, 148, 0.1);
+}
