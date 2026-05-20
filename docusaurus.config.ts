@@ -121,8 +121,13 @@ const config: Config = {
           position: 'left',
         },
         {
-          to: '/docs/developer/getting-started',
+          to: '/docs/developer/micropython/micropython-with-nm-cyd-c5',
           label: 'Developer',
+          position: 'left',
+        },
+        {
+          to: '/docs/applications/esp32-ai/esp-claw-nm-cyd-c5',
+          label: 'Applications',
           position: 'left',
         },
         {
@@ -157,7 +162,11 @@ const config: Config = {
             },
             {
               label: 'Developer',
-              to: '/docs/developer/getting-started',
+              to: '/docs/developer/micropython/micropython-with-nm-cyd-c5',
+            },
+            {
+              label: 'Applications',
+              to: '/docs/applications/esp32-ai/esp-claw-nm-cyd-c5',
             },
           ],
         },

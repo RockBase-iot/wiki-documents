@@ -8,7 +8,18 @@ const sidebars: SidebarsConfig = {
       label: 'Products',
       items: [
         'products/nm-cyd-c5',
-        'products/nm-rf-hat',
+        {
+          type: 'category',
+          label: 'NM-RF-HAT',
+          link: {
+            type: 'doc',
+            id: 'products/nm-rf-hat',
+          },
+          items: [
+            'products/nm-rf-hat-quick-start',
+            'products/nm-rf-hat-faq',
+          ],
+        },
         'products/nm-display-28',
       ],
     },
@@ -16,7 +27,26 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Developer',
       items: [
-        'developer/getting-started',
+        {
+          type: 'category',
+          label: 'MicroPython',
+          items: [
+            'developer/micropython/micropython-with-nm-cyd-c5',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Applications',
+      items: [
+        {
+          type: 'category',
+          label: 'ESP32 AI',
+          items: [
+            'applications/esp32-ai/esp-claw-nm-cyd-c5',
+          ],
+        },
       ],
     },
   ],

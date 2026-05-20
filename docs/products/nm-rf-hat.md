@@ -6,50 +6,58 @@ sidebar_position: 2
 
 ## Overview
 
-The NM-RF-HAT is an RF expansion module supporting dual-band communication in Sub-GHz and 2.4 GHz, suitable for smart home, industrial remote control, and wireless sensor networks.
+The NM-RF-HAT is an all-in-one RF expansion HAT designed for ESP32-2432S028 (CYD).
+It integrates multiple radio interfaces on one board and adds a hardware RF switch to reduce SPI conflicts in multi-module setups.
 
-## Specifications
+## Key Features
 
-| Parameter | Specification |
-|-----------|---------------|
-| RF Chip | CC1101 + nRF24L01 |
-| Bands | 433/868/915 MHz + 2.4 GHz |
-| TX Power | ≤ +20 dBm |
-| RX Sensitivity | -120 dBm @ 0.6 kbps |
-| Interface | SPI + GPIO |
-| Dimensions | 30 x 65 mm |
+### Hardware-Level Conflict Resolution
 
-## Usage
+- Hardware RF switch for selecting active RF paths in shared-bus scenarios.
+- Improves stability when combining display/TF card/RF modules on the same platform.
+- Reduces firmware-level pin remapping complexity for CYD-based projects.
 
-### SPI Wiring
+### All-in-One RF and Utility Integration
 
-| HAT Pin | Host Pin |
-|---------|----------|
-| SCK | GPIO14 |
-| MISO | GPIO12 |
-| MOSI | GPIO13 |
-| CSN | GPIO15 |
-| IRQ | GPIO16 |
+| Module | Frequency / Type | Typical Function |
+|--------|-------------------|------------------|
+| CC1101 | Sub-GHz (433 MHz) | Remote control and sensor signal capture |
+| nRF24 | 2.4 GHz | Wireless protocol analysis and communication |
+| PN532 | NFC / RFID | Read, write, and emulation workflows |
+| IR TX/RX | Infrared | IR signal capture and replay |
+| 433 OOK TX/RX | 433 MHz OOK | Basic RF transmission/reception |
+| GNSS Header | GPS expansion | Location and tracking extension |
+| Power Circuit | USB-C / battery path | Power input and hardware switch control |
 
-### MicroPython Example
+### Plug-and-Play GPS Expansion
 
-```python
-from machine import SPI, Pin
-import nrf24l01
+- New GPS module option supports plug-and-play use.
+- Fast satellite acquisition and stable positioning in weak-signal environments.
+- Suitable for IoT tracking, robotics, and vehicle positioning projects.
 
-spi = SPI(1, baudrate=10000000, sck=Pin(14), mosi=Pin(13), miso=Pin(12))
-csn = Pin(15, Pin.OUT, value=1)
-ce = Pin(17, Pin.OUT, value=0)
+## Compatibility and Connection
 
-radio = nrf24l01.NRF24L01(spi, csn, ce)
-radio.open_tx_pipe(b'1Node')
-radio.open_rx_pipe(1, b'2Node')
-radio.start_listening()
-```
+- Primary target platform: ESP32-2432S028 (CYD).
+- Designed for minimal wiring with bundled cable layout (2x4-pin, 1x5-pin, TF extension cable).
+- Product options on store pages may include: HAT only / HAT + Bruce / HAT + GPS.
 
-## Applications
+## Quick Start
 
-- Smart home gateway
-- Industrial wireless remote control
-- Environmental monitoring nodes
-- Low-power sensor networks
+1. Connect NM-RF-HAT to ESP32-2432S028 (CYD) using the recommended cable set.
+2. Select the required RF path with the onboard hardware switch.
+3. Flash the target firmware (for example Bruce-CYD-2USB when using Bruce ecosystem).
+4. Validate each module one by one (Sub-GHz, nRF24, NFC/RFID, IR, OOK, GPS).
+
+## Application Scenarios
+
+- RF protocol testing and replay workflows
+- Smart home and sensor signal integration
+- Security research and hardware lab prototyping
+- Mobile/vehicle tracking with GNSS extension
+
+## References
+
+- RockBase product page: https://rockbase.shop/products/nm-rf-hat
+- NMMiner product page: https://www.nmminer.com/product/nm-rf-hat/
+- Quick Start Guide: /docs/products/nm-rf-hat-quick-start
+- FAQ: /docs/products/nm-rf-hat-faq
