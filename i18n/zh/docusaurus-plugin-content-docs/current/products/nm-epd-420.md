@@ -96,5 +96,5 @@ sidebar_position: 4
 ## 资源
 
 - [GitHub 仓库](https://github.com/RockBase-iot/NM-Display-420)
-- [工厂测试快速入门](/docs/products/nm-display-420-quickstart)
+- [工厂测试快速入门](/docs/products/nm-epd-420-quickstart)
 - [ESP32-S3 数据手册](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
