@@ -36,11 +36,11 @@
     <style
        id="style1">
       .cls-1 {
-        fill: #262f38;
+        fill: #b8c4ce;
       }
 
       .cls-2 {
-        fill: #079c9b;
+        fill: #00d6d6;
       }
     </style>
   </defs>
@@ -147,22 +147,22 @@
        transform="translate(0,0.001)"
        id="path19"
        sodipodi:nodetypes="csccccsccccccccscccccscccc"
-       style="fill:#079c9b;fill-opacity:1" />
+       style="fill:#00d6d6;fill-opacity:1" />
     <path
        d="M1062.82,626.137a23.9,23.9,0,0,1,21.153,14.082c4.7,9.824,3.9,19.54-3.278,28-6.387,7.526-15.136,9.622-24.618,8.691-14.919-1.465-24.008-12.708-23.087-28.2C1033.754,635.867,1045.28,626.163,1062.82,626.137Zm-3.107,12.526a12.112,12.112,0,0,0-12.6,12.379c.017,7.755,5.27,13.542,12.355,13.614,7.38.074,12.675-5.362,12.73-13.071C1072.254,644.139,1067.008,638.711,1059.713,638.663Z"
        transform="translate(0 0.001)"
        id="path20"
-       style="fill:#079c9b;fill-opacity:1" />
+       style="fill:#00d6d6;fill-opacity:1" />
     <path
        d="M1108.54,675.8V625.05h-20.063V612.405c1.217,0,2.442,0,3.668,0,16.185.032,32.37.133,48.554.027,2.7-.018,3.491.8,3.339,3.35-.172,2.866-.04,5.75-.04,9.026h-20.125V675.8Z"
        transform="translate(0 0.001)"
        id="path21"
-       style="fill:#079c9b;fill-opacity:1" />
+       style="fill:#00d6d6;fill-opacity:1" />
     <path
        d="M1023.192,612.652v63.023h-14.417V612.652Z"
        transform="translate(0 0.001)"
        id="path22"
-       style="fill:#079c9b;fill-opacity:1" />
+       style="fill:#00d6d6;fill-opacity:1" />
   </g>
   <metadata
      id="metadata22">

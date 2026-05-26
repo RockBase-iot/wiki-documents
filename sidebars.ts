@@ -21,6 +21,17 @@ const sidebars: SidebarsConfig = {
           ],
         },
         'products/nm-display-28',
+        {
+          type: 'category',
+          label: 'NM-EPD-420',
+          link: {
+            type: 'doc',
+            id: 'products/nm-epd-420',
+          },
+          items: [
+            'products/nm-epd-420-quickstart',
+          ],
+        }
       ],
     },
     {
