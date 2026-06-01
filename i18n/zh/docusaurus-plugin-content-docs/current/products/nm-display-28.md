@@ -256,6 +256,9 @@ if (ft6336_read_touch(&point)) {
 ### Q4: 如何进入下载模式？
 **A4**: 按住 BOOT 按钮，然后按下并松开 RST 按钮，最后松开 BOOT 按钮。设备将进入 UART 下载模式。
 
+### Q5: 突然断电无法开机怎么办？
+**A5**: 可能是USB接口输入电压过低导致 PMU 保护触发，尝试更换高质量的电源或使用电池供电。另外，对于使用摄像头等外设的应用，一定要检查PMU AXP2101的配置是否正确，确保电源管理芯片能够提供足够的电流。具体可以参考[NM-Display-2.8 工厂测试代码](https://github.com/RockBase-iot/NM-Display-28inch/tree/Arduino/src/ui/factory_test/factory_test.cpp)
+
 ## 参考资料
 
 | 资源 | 链接 |

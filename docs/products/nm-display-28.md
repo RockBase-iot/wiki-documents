@@ -256,6 +256,9 @@ if (ft6336_read_touch(&point)) {
 ### Q4: How to enter download mode?
 **A4**: Hold the BOOT button, press and release the RST button, then release the BOOT button. The device will enter UART download mode.
 
+### Q5: What if the device fails to boot after a sudden power loss?
+**A5**: It may be caused by the PMU protection being triggered due to low input voltage from the USB port. Try replacing with a high-quality power supply or using battery power. In addition, for applications using peripherals such as the camera, make sure to check that the PMU AXP2101 is configured correctly to ensure the power management IC can provide sufficient current. Refer to the [NM-Display-2.8 Factory Test Code](https://github.com/RockBase-iot/NM-Display-28inch/tree/Arduino/src/ui/factory_test/factory_test.cpp) for details.
+
 ## Reference Resources
 
 | Resource | Link |

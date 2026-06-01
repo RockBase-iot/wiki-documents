@@ -56,6 +56,7 @@ const sidebars: SidebarsConfig = {
           label: 'ESP32 AI',
           items: [
             'applications/esp32-ai/esp-claw-nm-cyd-c5',
+            'applications/esp32-ai/esp-claw-nm-display-28inch',
           ],
         },
       ],
