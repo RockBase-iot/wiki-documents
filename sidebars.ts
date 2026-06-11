@@ -23,6 +23,17 @@ const sidebars: SidebarsConfig = {
         'products/nm-display-28',
         {
           type: 'category',
+          label: 'GPS / GNSS',
+          link: {
+            type: 'doc',
+            id: 'products/nm-atgm336h',
+          },
+          items: [
+            'products/nm-atgm336h',
+          ],
+        },
+        {
+          type: 'category',
           label: 'NM-EPD-420',
           link: {
             type: 'doc',
@@ -51,6 +62,13 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Applications',
       items: [
+        {
+          type: 'category',
+          label: 'e-Paper',
+          items: [
+            'applications/e-Paper/nm-epd-420-esp32-dashboard',
+          ],
+        },
         {
           type: 'category',
           label: 'ESP32 AI',

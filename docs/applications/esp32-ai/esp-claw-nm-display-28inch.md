@@ -99,6 +99,10 @@ Click **Flash** and wait for the progress bar to complete.
 
 After reboot, connect to the `ESP-Claw-XXXX` Wi-Fi AP and open `http://192.168.4.1`. Enter your preferred LLM API key (OpenAI, DeepSeek, Kimi, etc.) and save.
 
+#### 3.1 Status Page Switching
+
+On the `nm-display-28inch` device, the status page switching feature has been adjusted to accommodate the different touchscreen and support LCD touch painting applications. Users can switch status pages by pressing the **BOOT button** (the first button on the top-left corner).
+
 ### 4. Start Chatting
 
 Add the device's bot in your IM app. Try saying:
@@ -113,16 +117,21 @@ If you want to capture an audio sample, just ask:
 > *"Record a 5-second voice memo and save it as 'memo.wav'."*
 ESP-Claw will use the ES8311's I2S recording capability to capture audio and store it on the SD card or internal flash. Or, you can ask esp-claw to send the audio file to your IM chat for instant playback.
 
-#### Example 2: Install Camera Preview Skill
+#### Example 2: Camera Preview Skill
 
-Now, you can install skills from the [ESP-Claw Skills-lab](https://skills-lab.esp-claw.com/).
-To Install the `camera-preview` skill, please send the following to your ESP-Claw:
-```
-Download the following Skill from ESP-Claw Skills Lab: camera_preview
-```
+The ESP-Claw firmware provided by RockBase-IoT includes a built-in **camera preview** skill, supporting on-board cameras (such as OV2640).
+
 Use this skill when the user asks to preview the camera, show the camera output, open the camera, run a camera demo, or test that the camera works.
 
 The Lua script grabs frames from the on-board camera and pushes them to the LCD using the display module. RGB565 / RGB565X pixel formats are supported.
+
+The official firmware also supports **audio recording** and **video recording**. Users can ask ESP-Claw to record a video or audio clip and save it to the SD card or internal flash, or even send it directly to the IM chat.
+
+:::warning
+Audio and video files can be quite large. If you need these features, it is **strongly recommended** to equip the device with an SD card; otherwise, the operation may fail due to limited internal flash space.
+:::
+
+Additionally, due to the performance constraints of the ESP32-S3, ESP-Claw currently cannot perform video encoding on the device side. The quality and performance of recorded files will be relatively limited.
 
 #### Example 3: LCD Touch Paint
 

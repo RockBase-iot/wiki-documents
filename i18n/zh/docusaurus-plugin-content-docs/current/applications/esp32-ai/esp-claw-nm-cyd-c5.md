@@ -90,6 +90,8 @@ sidebar_position: 1
 
 [NMIOT Web Flasher](https://flash.nmiot.net/) 提供了便捷的在线烧录体验。选择 `espclaw` 项目，设备选择 `nm-cyd-c5`，版本选择 `v0.2.1`，点击 `Flash` 即可。
 
+**注意：**如果你不希望在刷机过程中丢失 `ESP-Claw` 的参数，你可能需要使用 SD 卡来存储参数、记忆和技能。刷机完成后，参数将自动恢复。
+
 ### 3. 配置 AI 模型
 
 连接开发板的 Wi-Fi AP，打开网页配置面板。输入你偏好的 LLM API 密钥（OpenAI、DeepSeek、Kimi 等）。

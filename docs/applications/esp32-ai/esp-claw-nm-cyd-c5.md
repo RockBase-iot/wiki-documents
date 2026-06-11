@@ -90,6 +90,8 @@ Purchase the NM-CYD-C5 from:
 
 [NMIOT Web Flash Tool](https://flash.nmiot.net/) supports one-click flashing of ESP-Claw firmware onto NM-CYD-C5. Just select the project, device, and version, and you're good to go.
 
+**Note:**If you do not want the parameters of your `ESP-Claw` lost during flashing, you may need a SDCard, which will store the parameters, memory, and skills. After you flashed, the parameters will automatically restored for you.
+
 ### 3. Configure AI Model
 
 Connect to the board's Wi-Fi AP and open the web config panel. Enter your preferred LLM API key (OpenAI, DeepSeek, Kimi, etc.).
