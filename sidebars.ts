@@ -75,6 +75,7 @@ const sidebars: SidebarsConfig = {
           items: [
             'applications/esp32-ai/esp-claw-nm-cyd-c5',
             'applications/esp32-ai/esp-claw-nm-display-28inch',
+            'applications/esp32-ai/esp-claw-meshtastic-guide',
           ],
         },
       ],
