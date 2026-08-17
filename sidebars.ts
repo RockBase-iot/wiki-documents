@@ -42,7 +42,33 @@ const sidebars: SidebarsConfig = {
           items: [
             'products/nm-epd-420-quickstart',
           ],
-        }
+        },
+        'products/nm-tv-154',
+        'products/nm-solar',
+        'products/k230-vision',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Projects',
+      items: [
+        'projects/overview',
+        'projects/deskbuddy-tv',
+        'projects/esp32-plane-radar',
+        'projects/nm-epd-420-ecosystem',
+        'projects/esp32-dashboard',
+        'projects/esp32-weather-epd',
+        'projects/biscuit',
+        'projects/hardware-buddy',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Platform',
+      items: [
+        'platform/web-flasher',
+        'platform/espwebapps',
+        'platform/community',
       ],
     },
     {

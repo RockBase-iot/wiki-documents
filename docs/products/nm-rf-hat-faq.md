@@ -69,7 +69,8 @@ Common causes:
 
 ## Further Help
 
-- Bruce Wiki: https://wiki.bruce.computer/
-- NMTech: https://www.nmminer.com/
-- Telegram: https://t.me/NMMiner
-- Reddit: https://www.reddit.com/r/NMTech_Team/
+- Bruce Wiki: [wiki.bruce.computer](https://wiki.bruce.computer/)
+- NMTech: [nmminer.com](https://www.nmminer.com/)
+- Telegram: [t.me/NMMiner](https://t.me/NMMiner)
+- Telegram: [t.me/rockbase_iot](https://t.me/rockbase_iot)
+- Reddit: [r/NMTech_Team](https://www.reddit.com/r/NMTech_Team/)

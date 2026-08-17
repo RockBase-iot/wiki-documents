@@ -3,6 +3,10 @@
     "message": "RockBase IoT",
     "description": "The title in the navbar"
   },
+  "logo.alt": {
+    "message": "RockBase IoT Logo",
+    "description": "The alt text of navbar logo"
+  },
   "item.label.Docs": {
     "message": "文档",
     "description": "Navbar item with label Docs"
@@ -11,16 +15,20 @@
     "message": "产品",
     "description": "Navbar item with label Products"
   },
-  "item.label.Developer": {
-    "message": "开发者",
-    "description": "Navbar item with label Developer"
+  "item.label.Projects": {
+    "message": "项目",
+    "description": "Navbar item with label Projects"
+  },
+  "item.label.Applications": {
+    "message": "应用",
+    "description": "Navbar item with label Applications"
   },
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
   },
-  "item.label.返回官网": {
+  "item.label.Back to Website": {
     "message": "返回官网",
-    "description": "Navbar item with label 返回官网"
+    "description": "Navbar item with label Back to Website"
   }
 }

@@ -32,6 +32,8 @@ The module communicates via a standard UART interface with NMEA-0183 protocol ou
 | **Sensitivity (Cold Start)** | -148 dBm |
 | **Sensitivity (Tracking)** | -162 dBm |
 | **Accuracy (Horizontal)** | < 2.5 m CEP (open sky) |
+| **Speed Accuracy** | < 0.1 m/s |
+| **Update Rate** | 1 Hz (default), up to 10 Hz |
 | **UART Baud Rate** | 9600 bps (default), 4800–115200 bps configurable |
 | **UART Level** | TTL 3.3V / 5V compatible |
 | **Supply Voltage** | 3.3V – 5.0V DC |
@@ -63,6 +65,7 @@ Just Plug-and-play with the CYD series development board, no wiring needed. The 
 ### Arduino Example
 
 ```cpp
+#include <SoftwareSerial.h>
 
 HardwareSerial GPSserial = HardwareSerial(2);
 

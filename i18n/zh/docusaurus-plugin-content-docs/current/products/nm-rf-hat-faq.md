@@ -69,7 +69,8 @@ NM-RF-HAT 是面向 ESP32-2432S028 与 NM-CYD-C5 的多功能 RF 扩展板。
 
 ## 进一步支持
 
-- Bruce Wiki：https://wiki.bruce.computer/
-- NMTech：https://www.nmminer.com/
-- Telegram：https://t.me/NMMiner
-- Reddit：https://www.reddit.com/r/NMTech_Team/
+- Bruce Wiki：[wiki.bruce.computer](https://wiki.bruce.computer/)
+- NMTech：[nmminer.com](https://www.nmminer.com/)
+- Telegram：[t.me/NMMiner](https://t.me/NMMiner)
+- Telegram：[t.me/rockbase_iot](https://t.me/rockbase_iot)
+- Reddit：[r/NMTech_Team](https://www.reddit.com/r/NMTech_Team/)

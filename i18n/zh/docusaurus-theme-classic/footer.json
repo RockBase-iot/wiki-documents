@@ -1,4 +1,16 @@
 {
+  "link.title.Docs": {
+    "message": "文档",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Community": {
+    "message": "社区",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "更多",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
   "link.item.label.Intro": {
     "message": "简介",
     "description": "The label of footer link with label=Intro linking to /docs/"
@@ -7,17 +19,21 @@
     "message": "产品",
     "description": "The label of footer link with label=Products linking to /docs/products/nm-cyd-c5"
   },
-  "link.item.label.Developer": {
-    "message": "开发者",
-    "description": "The label of footer link with label=Developer linking to /docs/developer/getting-started"
+  "link.item.label.Projects": {
+    "message": "项目",
+    "description": "The label of footer link with label=Projects linking to /docs/projects/overview"
+  },
+  "link.item.label.Applications": {
+    "message": "应用",
+    "description": "The label of footer link with label=Applications linking to /docs/applications/esp32-ai/esp-claw-nm-cyd-c5"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
-    "description": "The label of footer link with label=GitHub"
+    "description": "The label of footer link with label=GitHub linking to https://github.com/RockBase-iot/wiki-documents"
   },
-  "link.item.label.官网": {
+  "link.item.label.Website": {
     "message": "官网",
-    "description": "The label of footer link with label=官网"
+    "description": "The label of footer link with label=Website linking to https://rockbaseiot.com"
   },
   "copyright": {
     "message": "Copyright © 2026 RockBase IoT. Built with Docusaurus.",

@@ -38,7 +38,7 @@ Ensure all cables are fully seated and aligned with the expected pin order on NM
 
 ## Flash Bruce Firmware
 
-1. Open https://flash.nmiot.net/
+1. Open [RockBase IoT Web Flasher](https://flash.rockbaseiot.com/)
 2. Select project: `bruce`
 3. Select device: `nm-cyd-c5` or `esp32-2432s028`
 4. Select version (example from official article): `v1.14.0`
@@ -78,5 +78,5 @@ Important:
 
 ## References
 
-- Quick Start article: https://rockbase.shop/blogs/tech-news/nm-rf-hat-quick-start
-- FAQ source: https://github.com/RockBase-iot/NM-RF-HAT/blob/main/NM-RF-HAT%20FAQ.md
+- Quick Start article: [rockbase.shop/blogs/tech-news/nm-rf-hat-quick-start](https://rockbase.shop/blogs/tech-news/nm-rf-hat-quick-start)
+- FAQ source: [NM-RF-HAT FAQ.md](https://github.com/RockBase-iot/NM-RF-HAT/blob/main/NM-RF-HAT%20FAQ.md)

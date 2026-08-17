@@ -126,8 +126,8 @@ const config: Config = {
           position: 'left',
         },
         {
-          to: '/docs/developer/micropython/micropython-with-nm-cyd-c5',
-          label: 'Developer',
+          to: '/docs/projects/overview',
+          label: 'Projects',
           position: 'left',
         },
         {
@@ -166,8 +166,8 @@ const config: Config = {
               to: '/docs/products/nm-cyd-c5',
             },
             {
-              label: 'Developer',
-              to: '/docs/developer/micropython/micropython-with-nm-cyd-c5',
+              label: 'Projects',
+              to: '/docs/projects/overview',
             },
             {
               label: 'Applications',

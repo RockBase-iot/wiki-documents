@@ -115,8 +115,7 @@ mpremote connect COM3 repl
 ## Firmware Flashing
 
 If you just want to flash firmware, try:
-- [NMMiner Web Flasher](https://nmminer.com)
-- [NMIoT Web Flasher](https://nmiot.com) — select device type `nm-cyd-c5`
+- [RockBase IoT Web Flasher](https://flash.rockbaseiot.com)
 
 ## Where to Buy
 

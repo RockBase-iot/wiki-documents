@@ -57,7 +57,7 @@ It integrates multiple radio interfaces on one board and adds a hardware RF swit
 
 ## References
 
-- RockBase product page: https://rockbase.shop/products/nm-rf-hat
-- NMMiner product page: https://www.nmminer.com/product/nm-rf-hat/
+- RockBase product page: [rockbase.shop/products/nm-rf-hat](https://rockbase.shop/products/nm-rf-hat)
+- NMMiner product page: [nmminer.com/product/nm-rf-hat](https://www.nmminer.com/product/nm-rf-hat/)
 - Quick Start Guide: /docs/products/nm-rf-hat-quick-start
 - FAQ: /docs/products/nm-rf-hat-faq

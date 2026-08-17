@@ -57,7 +57,7 @@ NM-RF-HAT 是面向 ESP32-2432S028（CYD）的 all-in-one 射频扩展 HAT。
 
 ## 参考链接
 
-- RockBase 产品页：https://rockbase.shop/products/nm-rf-hat
-- NMMiner 产品页：https://www.nmminer.com/product/nm-rf-hat/
+- RockBase 产品页：[rockbase.shop/products/nm-rf-hat](https://rockbase.shop/products/nm-rf-hat)
+- NMMiner 产品页：[nmminer.com/product/nm-rf-hat](https://www.nmminer.com/product/nm-rf-hat/)
 - 快速上手：/zh/docs/products/nm-rf-hat-quick-start
 - FAQ：/zh/docs/products/nm-rf-hat-faq

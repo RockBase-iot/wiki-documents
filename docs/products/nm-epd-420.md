@@ -6,7 +6,9 @@ sidebar_position: 4
 
 ## Overview
 
-The **NM-EPD-420** is an ESP32-S3 based 4.2-inch 3-Color E-ink display development board. It features a tri-color (Black / White / Red) e-paper panel, audio codec(ES8311), environmental sensor(AHT20), RGB LED(WS2812), SD card slot, and LoRa modem (SX126x family, Heltec RA62) — making it ideal for low-power IoT dashboards, outdoor signage, and smart labeling applications.
+The **NM-EPD-420** is an ESP32-S3 based 4.2-inch e-ink display development board. It is available with either a tri-color (Black / White / Red) e-paper panel or a dual-color (Black / White) e-paper panel, and features an audio codec (ES8311), environmental sensor (AHT20), RGB LED (WS2812), SD card slot, and optional LoRa modem (SX126x family) — making it ideal for low-power IoT dashboards, outdoor signage, and smart labeling applications.
+
+![NM-EPD-420 Dashboard](/img/products/nm-epd-420/esp-dashboard.png)
 
 ## Hardware Specifications
 
@@ -23,23 +25,43 @@ The **NM-EPD-420** is an ESP32-S3 based 4.2-inch 3-Color E-ink display developme
 
 | Item | Specification |
 |------|---------------|
-| **Panel** | GDEY042Z98 |
+| **Panel** | GDEY042Z98 tri-color e-paper (or GYE042A87 black/white e-paper), same pinout |
 | **Size** | 4.2 inches |
 | **Resolution** | 400 × 300 |
-| **Colors** | 3-color (Black / White / Red) |
+| **Colors** | 3-color (Black / White / Red) or 2-color (Black / White) |
 | **Driver** | GxEPD2 |
 | **Interface** | SPI (FSPI) |
+
+The NM-EPD-420 currently supports both the tri-color panel (GDEY042Z98) and the black/white panel (GYE042A87). Their refresh performance differs as follows:
+
+- **GDEY042Z98 Tri-color E-Paper**:
+  - **SKU: NM-EPD-420**
+  - Full refresh (Black / White / Red) takes about 10 seconds; partial refresh is not supported.
+  - For weather stations, dashboards, and similar applications, the tri-color panel provides richer visual effects but slower refresh speeds, making it suitable for static content display.
+  - The default tri-color version does not include a LoRa module and is ideal for general desktop applications.
+
+- **GYE042A87 Black/White E-Paper**:
+  - **SKU: NM-EPD-420-BW**
+  - Full refresh (Black / White) takes about 2–3 seconds; partial refresh is supported, with partial refresh time around 1 second.
+  - For applications requiring faster content updates, the black/white panel (GYE042A87) is recommended.
+  - The NM-EPD-420-BW version supports a LoRa module by default, making it more convenient for indoor desktop LoRa node applications.
+
+The LoRa version includes an HT-RA62 module (SX1262) for Meshtastic, MeshCore, and other LoRa applications. The non-LoRa version omits the module for general applications. The default NM-EPD-420-BW version supports LoRa to provide better screen refresh performance for relevant LoRa applications.
+
+![NM-EPD-420-LoRa](/img/products/nm-epd-420/nm_epd_420_interfaces_lora.png)
+
+![NM-EPD-420-NoLoRa](/img/products/nm-epd-420/nm_epd_420_interfaces_no_lora.png)
 
 ### Onboard Peripherals
 
 | Block | Part | Interface | Notes |
 |-------|------|-----------|-------|
-| **Codec** | ES8311 | I2C 0x18 + I2S | DAC → external PA → 4 Ω speaker |
+| **Codec** | ES8311 | I2C 0x18 + I2S | DAC → external PA → 8 Ω speaker |
 | **Microphone** | LMD4737 PDM DMIC | I2S (DMIC mode) | 16 kHz sample rate |
 | **T/RH Sensor** | AHT20 | I2C 0x38 | Power-gated via `PIN_TEMP_CTL` |
 | **RGB LED** | WS2812 | RMT | 1 pixel |
 | **SD Card** | μSD | SPI (HSPI) | Shared bus with LoRa |
-| **LoRa Modem** | SX126x family (Heltec RA62) | SPI (HSPI) | CS / RST / BUSY GPIOs |
+| **LoRa Modem** | SX126x family | SPI (HSPI) | CS / RST / BUSY GPIOs |
 | **Buttons** | USER, BOOT | GPIO | Active LOW, external pull-up |
 | **Audio Amp** | External Class-D | EN GPIO | Enabled by `PIN_PA_CTRL` HIGH |
 
@@ -52,7 +74,7 @@ The **NM-EPD-420** is an ESP32-S3 based 4.2-inch 3-Color E-ink display developme
 | SCK | 2 | OUT |
 | MOSI | 1 | OUT |
 | MISO | - | - |
-| CS | 3 | OUT |
+| CS | 46 | OUT |
 | DC | 4 | OUT |
 | RST | 5 | OUT |
 | BUSY | 6 | IN |
@@ -90,7 +112,10 @@ The **NM-EPD-420** is an ESP32-S3 based 4.2-inch 3-Color E-ink display developme
 | PA_CTRL | 41 | OUT | External amplifier enable |
 | USER button | 45 | IN | Active LOW |
 | BOOT button | 0 | IN | Active LOW, RTC GPIO |
-| WS2812 data | 47 | OUT | RMT |
+| LoRa EN | 47 | OUT | LoRa module power enable, active HIGH |
+| Codec EN | 44 | OUT | Audio codec power enable, active HIGH |
+| ADC EN | 43 | OUT | ADC module power enable, active HIGH |
+| BATT_ADC | 3 | IN | Battery voltage divider sampling input |
 
 > Authoritative source: [src/config.h](https://github.com/RockBase-iot/NM-Display-420/blob/main/src/config.h)
 

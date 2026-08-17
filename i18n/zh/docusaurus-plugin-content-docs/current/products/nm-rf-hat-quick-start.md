@@ -38,7 +38,7 @@ sidebar_position: 3
 
 ## 烧录 Bruce 固件
 
-1. 打开 https://flash.nmiot.net/
+1. 打开 [RockBase IoT Web Flasher](https://flash.rockbaseiot.com/)
 2. 选择项目：`bruce`
 3. 选择设备：`nm-cyd-c5` 或 `esp32-2432s028`
 4. 选择版本（官方文章示例）：`v1.14.0`
@@ -78,5 +78,5 @@ NM-RF-HAT 使用 6 位 DIP 开关：
 
 ## 参考链接
 
-- Quick Start 原文：https://rockbase.shop/blogs/tech-news/nm-rf-hat-quick-start
-- FAQ 原文：https://github.com/RockBase-iot/NM-RF-HAT/blob/main/NM-RF-HAT%20FAQ.md
+- Quick Start 原文：[rockbase.shop/blogs/tech-news/nm-rf-hat-quick-start](https://rockbase.shop/blogs/tech-news/nm-rf-hat-quick-start)
+- FAQ 原文：[NM-RF-HAT FAQ.md](https://github.com/RockBase-iot/NM-RF-HAT/blob/main/NM-RF-HAT%20FAQ.md)

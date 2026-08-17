@@ -115,8 +115,7 @@ mpremote connect COM3 repl
 ## 固件烧录
 
 如果只想快速刷入固件，可使用：
-- [NMMiner Web Flasher](https://flash.nmminer.com)
-- [NMIoT Web Flasher](https://flash.nmiot.net) — 选择设备类型 `nm-cyd-c5`
+- [RockBase IoT Web Flasher](https://flash.rockbaseiot.com)
 
 ## 购买渠道
 

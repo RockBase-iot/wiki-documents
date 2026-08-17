@@ -1,0 +1,34 @@
+{
+  "sidebar.tutorialSidebar.category.Products": {
+    "message": "产品",
+    "description": "The label for category Products in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Projects": {
+    "message": "项目案例",
+    "description": "The label for category Projects in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Platform": {
+    "message": "平台与基础设施",
+    "description": "The label for category Platform in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Developer": {
+    "message": "开发指南",
+    "description": "The label for category Developer in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Applications": {
+    "message": "应用指南",
+    "description": "The label for category Applications in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.MicroPython": {
+    "message": "MicroPython",
+    "description": "The label for category MicroPython in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.e-Paper": {
+    "message": "墨水屏",
+    "description": "The label for category e-Paper in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.ESP32 AI": {
+    "message": "ESP32 AI",
+    "description": "The label for category ESP32 AI in sidebar tutorialSidebar"
+  }
+}
