@@ -57,9 +57,19 @@ const sidebars: SidebarsConfig = {
         'projects/esp32-plane-radar',
         'projects/nm-epd-420-ecosystem',
         'projects/esp32-dashboard',
+        'projects/esp32-dashboard-nm-epd-420',
         'projects/esp32-weather-epd',
         'projects/biscuit',
         'projects/hardware-buddy',
+        {
+          type: 'category',
+          label: 'ESP-Claw',
+          items: [
+            'projects/esp-claw-nm-cyd-c5',
+            'projects/esp-claw-nm-display-28inch',
+            'projects/esp-claw-meshtastic-guide',
+          ],
+        },
       ],
     },
     {
@@ -77,6 +87,20 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'category',
+          label: 'Official Firmware',
+          items: [
+            'developer/firmware/overview',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Open Source & Roadmap',
+          items: [
+            'developer/open-source/overview',
+          ],
+        },
+        {
+          type: 'category',
           label: 'MicroPython',
           items: [
             'developer/micropython/micropython-with-nm-cyd-c5',
@@ -86,24 +110,10 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Applications',
+      label: 'Support',
       items: [
-        {
-          type: 'category',
-          label: 'e-Paper',
-          items: [
-            'applications/e-Paper/nm-epd-420-esp32-dashboard',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'ESP32 AI',
-          items: [
-            'applications/esp32-ai/esp-claw-nm-cyd-c5',
-            'applications/esp32-ai/esp-claw-nm-display-28inch',
-            'applications/esp32-ai/esp-claw-meshtastic-guide',
-          ],
-        },
+        'support/faq',
+        'support/changelog',
       ],
     },
   ],

@@ -24,7 +24,7 @@ Thank you for choosing our products! We provide many forms of support to ensure 
 
  - 📧 **Email** : support@rockbaseiot.com
  - 🤖 **Telegram** : [t.me/rockbase_iot](https://t.me/rockbase_iot)
- - 🌐 **Reddit** : [r/RockBase_IoT](https://www.reddit.com/r/RockBase_IoT/)
+ - 🌐 **Facebook** : [RockBase IoT Community](https://www.facebook.com/groups/rockbaseiot/)
 
 ## Contributing to the Wiki
 

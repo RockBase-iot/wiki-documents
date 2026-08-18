@@ -47,6 +47,6 @@ Also included: an hourly temperature trend line with a 12-hour precipitation-pro
 2. Long-press the Boot button to enter AP config mode; connect to the hotspot to set Wi-Fi and location
 3. Afterwards, open the device IP in a browser anytime to adjust pages and data sources
 
-:::info NM-EPD-420 Guide
-For wiring, build, and flashing steps specific to the NM-EPD-420, see the dedicated guide in the Applications section.
+:::info NM-EPD-420 Deployment Guide
+For wiring, build, and flashing steps specific to the NM-EPD-420, see [ESP32-Dashboard on NM-EPD-420](./esp32-dashboard-nm-epd-420.md).
 :::

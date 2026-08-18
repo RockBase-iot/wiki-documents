@@ -131,11 +131,6 @@ const config: Config = {
           position: 'left',
         },
         {
-          to: '/docs/applications/esp32-ai/esp-claw-nm-cyd-c5',
-          label: 'Applications',
-          position: 'left',
-        },
-        {
           type: 'localeDropdown',
           position: 'right',
         },
@@ -170,8 +165,8 @@ const config: Config = {
               to: '/docs/projects/overview',
             },
             {
-              label: 'Applications',
-              to: '/docs/applications/esp32-ai/esp-claw-nm-cyd-c5',
+              label: 'Support',
+              to: '/docs/support/faq',
             },
           ],
         },

@@ -23,9 +23,9 @@
     "message": "项目",
     "description": "The label of footer link with label=Projects linking to /docs/projects/overview"
   },
-  "link.item.label.Applications": {
-    "message": "应用",
-    "description": "The label of footer link with label=Applications linking to /docs/applications/esp32-ai/esp-claw-nm-cyd-c5"
+  "link.item.label.Support": {
+    "message": "支持",
+    "description": "The label of footer link with label=Support linking to /docs/support/faq"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",

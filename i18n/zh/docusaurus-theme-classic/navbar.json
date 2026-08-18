@@ -19,10 +19,6 @@
     "message": "项目",
     "description": "Navbar item with label Projects"
   },
-  "item.label.Applications": {
-    "message": "应用",
-    "description": "Navbar item with label Applications"
-  },
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"

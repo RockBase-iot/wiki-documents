@@ -47,6 +47,6 @@ description: 免 API Key 的多页面墨水屏仪表盘固件（天气 / 时间�
 2. 长按 Boot 键进入 AP 配网模式，连接设备热点完成 Wi-Fi 与位置设置
 3. 之后可通过浏览器访问设备 IP 随时调整页面与数据源配置
 
-:::info 与 NM-EPD-420 配套应用指南
-针对 NM-EPD-420 的接线、编译与烧录步骤，另见应用指南栏目中的《NM-EPD-420 运行 ESP32-Dashboard》专题文档。
+:::info 与 NM-EPD-420 配套部署指南
+针对 NM-EPD-420 的接线、编译与烧录步骤，见 [NM-EPD-420 部署 ESP32-Dashboard](./esp32-dashboard-nm-epd-420.md)。
 :::

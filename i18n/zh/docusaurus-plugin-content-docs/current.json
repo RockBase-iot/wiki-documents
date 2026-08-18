@@ -15,6 +15,18 @@
     "message": "开发指南",
     "description": "The label for category Developer in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.Official Firmware": {
+    "message": "官方固件",
+    "description": "The label for category Official Firmware in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Open Source & Roadmap": {
+    "message": "开源内容与计划",
+    "description": "The label for category Open Source & Roadmap in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Support": {
+    "message": "支持与帮助",
+    "description": "The label for category Support in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Applications": {
     "message": "应用指南",
     "description": "The label for category Applications in sidebar tutorialSidebar"
@@ -23,12 +35,8 @@
     "message": "MicroPython",
     "description": "The label for category MicroPython in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.e-Paper": {
-    "message": "墨水屏",
-    "description": "The label for category e-Paper in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.ESP32 AI": {
-    "message": "ESP32 AI",
-    "description": "The label for category ESP32 AI in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.ESP-Claw": {
+    "message": "ESP-Claw",
+    "description": "The label for category ESP-Claw in sidebar tutorialSidebar"
   }
 }

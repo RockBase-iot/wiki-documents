@@ -37,10 +37,24 @@ description: RockBase IoT 开源固件与应用项目案例索引
 |------|------|
 | [Buddy Bridge App / Claude Desktop Buddy](./hardware-buddy.md) | USB 串口桌面伴侣 App 与 Claude 蓝牙 API 示例 |
 
+### ESP-Claw 边缘 AI Agent
+
+| 项目 | 说明 |
+|------|------|
+| [NM-CYD-C5 ESP-Claw](./esp-claw-nm-cyd-c5.md) | 掌心里的边缘 AI Agent：ESP32-C5 + Chat Coding，IM 对话生成 Lua 脚本 |
+| [NM-Display-2.8 ESP-Claw](./esp-claw-nm-display-28inch.md) | 多模态边缘 AI Agent：触摸、IMU、音频编解码、电池管理 |
+| [ESP-Claw × Meshtastic 对接指南](./esp-claw-meshtastic-guide.md) | UART 桥接 Meshtastic 节点，实现离网 Mesh 消息互通 |
+
+### 部署指南
+
+| 文档 | 说明 |
+|------|------|
+| [NM-EPD-420 部署 ESP32-Dashboard](./esp32-dashboard-nm-epd-420.md) | 在 NM-EPD-420 上部署 4.2" 三色墨水屏仪表盘的完整步骤 |
+
 ## 其他值得关注的项目
 
 - **[ESPWebApps](https://github.com/RockBase-iot/ESPWebApps)** — Web Flasher 固件聚合仓，社区可通过 fork + PR 提交新固件
-- **[esp-claw](https://github.com/RockBase-iot/esp-claw)** `nm-cyd-c5` 分支 — 乐鑫 Chat Coding AI Agent 框架，内置 nmminer 设备管理技能
+- **[esp-claw](https://github.com/RockBase-iot/esp-claw)** `nm-cyd-c5` 分支 — 乐鑫 Chat Coding AI Agent 框架，内置 nmminer 设备管理技能（站内教程见上方 ESP-Claw 分组）
 
 :::tip 烧录方式
 以上项目中标注支持 Web Flasher 的固件，均可在 [flash.rockbaseiot.com](https://flash.rockbaseiot.com) 中通过 Chrome / Edge 浏览器直接烧录，无需安装任何开发环境。

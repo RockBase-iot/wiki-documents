@@ -37,10 +37,24 @@ This section collects open-source firmware and application projects officially a
 |---------|-------------|
 | [Buddy Bridge App / Claude Desktop Buddy](./hardware-buddy.md) | USB-serial desktop companion app and Claude Bluetooth API example |
 
+### ESP-Claw Edge AI Agent
+
+| Project | Description |
+|---------|-------------|
+| [NM-CYD-C5 ESP-Claw](./esp-claw-nm-cyd-c5.md) | An edge AI Agent in your palm: ESP32-C5 + Chat Coding, IM conversations generate Lua scripts |
+| [NM-Display-2.8 ESP-Claw](./esp-claw-nm-display-28inch.md) | Multimodal edge AI Agent: touch, IMU, audio codec, battery management |
+| [ESP-Claw × Meshtastic Integration Guide](./esp-claw-meshtastic-guide.md) | Bridge a Meshtastic node over UART for offline mesh messaging |
+
+### Deployment Guides
+
+| Document | Description |
+|----------|-------------|
+| [ESP32-Dashboard on NM-EPD-420](./esp32-dashboard-nm-epd-420.md) | Complete steps to deploy the 4.2" tri-color e-paper dashboard on the NM-EPD-420 |
+
 ## Other Noteworthy Projects
 
 - **[ESPWebApps](https://github.com/RockBase-iot/ESPWebApps)** — Firmware aggregation repository behind the Web Flasher; the community can submit new firmware via fork + PR
-- **[esp-claw](https://github.com/RockBase-iot/esp-claw)** `nm-cyd-c5` branch — Espressif's Chat Coding AI agent framework with a built-in nmminer device-management skill
+- **[esp-claw](https://github.com/RockBase-iot/esp-claw)** `nm-cyd-c5` branch — Espressif's Chat Coding AI agent framework with a built-in nmminer device-management skill (see the ESP-Claw group above for on-site guides)
 
 :::tip Flashing
 Firmware marked as Web Flasher-ready can be flashed directly from Chrome / Edge at [flash.rockbaseiot.com](https://flash.rockbaseiot.com) — no development environment required.
