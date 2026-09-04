@@ -1,8 +1,11 @@
 /* RockBase IoT VI System — Industrial Tech Brutalism */
 
 :root {
-  /* Brand Colors */
+  /* Brand Colors（浅色 / 深色主题共用的原始色板） */
   --rb-rock-dark: #252F38;
+  /* 浅色主题正文用的柔和版 rock-dark，对比度约 9:1，避免纯黑般的刺眼感 */
+  --rb-rock-soft: #3A4550;
+  --rb-rock-secondary: #5C6670;
   --rb-base-cyan: #009494;
   --rb-base-cyan-dark: #008484;
   --rb-base-cyan-darker: #007c7c;
@@ -11,9 +14,33 @@
   --rb-base-cyan-lighter: #00acac;
   --rb-base-cyan-lightest: #00c1c1;
   --rb-tech-silver: #E1E4E8;
+  /* 深色主题正文长段落用的柔和版银白，对比度约 8.6:1（原 10.7:1），减少大段阅读时的光晕感 */
+  --rb-tech-silver-soft: #C9CED4;
   --rb-alert-orange: #FF7E67;
 
-  /* Infima Override */
+  /* 浅色主题纸面色，从 rock-dark 色相推导，而非直接用纯白 */
+  --rb-paper: #F4F6F7;
+  --rb-paper-surface: #FFFFFF;
+  --rb-paper-sunken: #E9EDEE;
+
+  --ifm-global-radius: 0.75rem;
+  --ifm-color-warning: var(--rb-alert-orange);
+  --ifm-font-family-base: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', monospace;
+  --ifm-heading-font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+
+  /* 页脚固定为深色品牌条，不随浅/深色主题切换 */
+  --ifm-footer-background-color: #1a2229;
+  --ifm-footer-color: var(--rb-tech-silver);
+  --ifm-footer-link-color: var(--rb-tech-silver);
+  --ifm-footer-link-hover-color: var(--rb-base-cyan);
+
+  /* 代码块固定使用暗色终端配色（Prism Dracula），高亮行底色需与之匹配，不随主题切换 */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ========== 深色主题（默认） ========== */
+[data-theme='dark'] {
   --ifm-color-primary: var(--rb-base-cyan);
   --ifm-color-primary-dark: var(--rb-base-cyan-dark);
   --ifm-color-primary-darker: var(--rb-base-cyan-darker);
@@ -24,7 +51,7 @@
 
   --ifm-background-color: var(--rb-rock-dark);
   --ifm-background-surface-color: #1a2229;
-  --ifm-font-color-base: var(--rb-tech-silver);
+  --ifm-font-color-base: var(--rb-tech-silver-soft);
   --ifm-font-color-secondary: #a0a8b0;
   --ifm-font-color-inverse: var(--rb-rock-dark);
 
@@ -33,19 +60,12 @@
   --ifm-navbar-link-hover-color: var(--rb-base-cyan);
   --ifm-navbar-link-active-color: var(--rb-base-cyan);
 
-  --ifm-footer-background-color: #1a2229;
-  --ifm-footer-color: var(--rb-tech-silver);
-  --ifm-footer-link-color: var(--rb-tech-silver);
-  --ifm-footer-link-hover-color: var(--rb-base-cyan);
-
   --ifm-card-background-color: rgba(37, 47, 56, 0.8);
   --ifm-color-emphasis-200: rgba(0, 148, 148, 0.2);
   --ifm-color-emphasis-300: rgba(0, 148, 148, 0.3);
-  --ifm-color-warning: var(--rb-alert-orange);
 
-  --ifm-global-radius: 0.75rem;
   --ifm-code-background: #1a2229;
-  --ifm-code-color: var(--rb-base-cyan-lightest);
+  --ifm-code-color: var(--rb-base-cyan-light);
 
   --ifm-menu-color: var(--rb-tech-silver);
   --ifm-menu-color-active: var(--rb-base-cyan);
@@ -57,9 +77,54 @@
   --ifm-button-background-color: var(--rb-base-cyan);
   --ifm-button-color: var(--rb-rock-dark);
 
-  --ifm-font-family-base: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', monospace;
-  --ifm-heading-font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+  --rb-heading-color: var(--rb-tech-silver);
+  --rb-hairline: rgba(0, 148, 148, 0.12);
+  --rb-hairline-strong: rgba(0, 148, 148, 0.18);
+}
+
+/* ========== 浅色主题（可手动切换，日间阅读用） ========== */
+[data-theme='light'] {
+  --ifm-color-primary: var(--rb-base-cyan-darker);
+  --ifm-color-primary-dark: var(--rb-base-cyan-darkest);
+  --ifm-color-primary-darker: var(--rb-base-cyan-darkest);
+  --ifm-color-primary-darkest: var(--rb-base-cyan-darkest);
+  --ifm-color-primary-light: var(--rb-base-cyan);
+  --ifm-color-primary-lighter: var(--rb-base-cyan-light);
+  --ifm-color-primary-lightest: var(--rb-base-cyan-lighter);
+
+  --ifm-background-color: var(--rb-paper);
+  --ifm-background-surface-color: var(--rb-paper-surface);
+  --ifm-font-color-base: var(--rb-rock-soft);
+  --ifm-font-color-secondary: var(--rb-rock-secondary);
+  --ifm-font-color-inverse: var(--rb-paper);
+
+  --ifm-navbar-background-color: rgba(244, 246, 247, 0.92);
+  --ifm-navbar-link-color: var(--rb-rock-dark);
+  --ifm-navbar-link-hover-color: var(--rb-base-cyan-darker);
+  --ifm-navbar-link-active-color: var(--rb-base-cyan-darker);
+
+  --ifm-card-background-color: var(--rb-paper-surface);
+  --ifm-color-emphasis-200: rgba(0, 124, 124, 0.1);
+  --ifm-color-emphasis-300: rgba(0, 124, 124, 0.18);
+
+  /* 行内代码在浅色背景下改用更深的青色，避免与深色主题一样的高亮度青色晃眼 */
+  --ifm-code-background: var(--rb-paper-sunken);
+  --ifm-code-color: var(--rb-base-cyan-darkest);
+
+  --ifm-menu-color: var(--rb-rock-soft);
+  --ifm-menu-color-active: var(--rb-base-cyan-darker);
+  --ifm-menu-color-background-active: rgba(0, 124, 124, 0.1);
+
+  /* 链接改用更深的青色变体，保证与白色纸面背景的对比度达到 AA 标准（约 6.7:1） */
+  --ifm-link-color: var(--rb-base-cyan-darker);
+  --ifm-link-hover-color: var(--rb-base-cyan-darkest);
+
+  --ifm-button-background-color: var(--rb-base-cyan-darker);
+  --ifm-button-color: #FFFFFF;
+
+  --rb-heading-color: var(--rb-rock-dark);
+  --rb-hairline: rgba(0, 124, 124, 0.18);
+  --rb-hairline-strong: rgba(0, 124, 124, 0.28);
 }
 
 html {
@@ -67,14 +132,14 @@ html {
 }
 
 body {
-  background-color: var(--rb-rock-dark);
-  color: var(--rb-tech-silver);
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
 }
 
 /* ========== .rb-noise — 多层径向渐变光晕背景 ========== */
 .rb-noise {
   position: relative;
-  background-color: var(--rb-rock-dark);
+  background-color: var(--ifm-background-color);
   overflow: hidden;
 }
 
@@ -98,7 +163,7 @@ body {
 /* ========== .rb-grid — 72px 科技网格线 ========== */
 .rb-grid {
   position: relative;
-  background-color: var(--rb-rock-dark);
+  background-color: var(--ifm-background-color);
 }
 
 .rb-grid::after {
@@ -136,7 +201,7 @@ body {
 /* Navbar */
 .navbar {
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 148, 148, 0.15);
+  border-bottom: 1px solid var(--rb-hairline-strong);
   box-shadow: none;
 }
 
@@ -152,11 +217,11 @@ body {
 }
 
 .navbar__link:hover {
-  color: var(--rb-base-cyan);
+  color: var(--ifm-navbar-link-hover-color);
 }
 
 .navbar__link--active {
-  color: var(--rb-base-cyan);
+  color: var(--ifm-navbar-link-active-color);
 }
 
 /* Footer */
@@ -184,7 +249,7 @@ body {
 
 .menu__link--active {
   background-color: var(--ifm-menu-color-background-active);
-  color: var(--rb-base-cyan);
+  color: var(--ifm-menu-color-active);
   font-weight: 600;
 }
 
@@ -194,7 +259,7 @@ body {
 .theme-doc-markdown h3,
 .theme-doc-markdown h4 {
   font-family: var(--ifm-heading-font-family);
-  color: var(--rb-tech-silver);
+  color: var(--rb-heading-color);
 }
 
 .theme-doc-markdown h1 {
@@ -204,25 +269,30 @@ body {
 
 .theme-doc-markdown h2 {
   font-weight: 700;
-  border-bottom: 1px solid rgba(0, 148, 148, 0.15);
+  border-bottom: 1px solid var(--rb-hairline);
   padding-bottom: 0.5rem;
 }
 
+.theme-doc-markdown p,
+.theme-doc-markdown li {
+  line-height: 1.75;
+}
+
 .theme-doc-markdown a {
-  color: var(--rb-base-cyan);
+  color: var(--ifm-link-color);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 }
 
 .theme-doc-markdown a:hover {
-  border-bottom-color: var(--rb-base-cyan);
+  border-bottom-color: var(--ifm-link-color);
 }
 
 /* Code blocks */
 .theme-code-block {
   border-radius: var(--ifm-global-radius);
-  border: 1px solid rgba(0, 148, 148, 0.15);
+  border: 1px solid var(--rb-hairline);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
@@ -234,7 +304,7 @@ pre code {
 code {
   background-color: var(--ifm-code-background);
   color: var(--ifm-code-color);
-  border: 1px solid rgba(0, 148, 148, 0.15);
+  border: 1px solid var(--rb-hairline);
   border-radius: 4px;
   padding: 0.15em 0.4em;
   font-size: 0.875em;
@@ -263,26 +333,26 @@ code {
 
 /* Breadcrumbs */
 .breadcrumbs__item--active .breadcrumbs__link {
-  color: var(--rb-base-cyan);
+  color: var(--ifm-link-color);
 }
 
 /* Pagination */
 .pagination-nav__link {
-  border: 1px solid rgba(0, 148, 148, 0.15);
+  border: 1px solid var(--rb-hairline-strong);
   border-radius: var(--ifm-global-radius);
 }
 
 .pagination-nav__link:hover {
-  border-color: var(--rb-base-cyan);
+  border-color: var(--ifm-link-color);
 }
 
 /* Table of Contents */
 .table-of-contents__link:hover {
-  color: var(--rb-base-cyan);
+  color: var(--ifm-link-color);
 }
 
 .table-of-contents__link--active {
-  color: var(--rb-base-cyan);
+  color: var(--ifm-link-color);
   font-weight: 600;
 }
 
@@ -294,7 +364,7 @@ code {
 .hero__title {
   font-family: var(--ifm-heading-font-family);
   font-weight: 800;
-  color: var(--rb-tech-silver);
+  color: var(--rb-heading-color);
 }
 
 .hero__subtitle {
@@ -302,15 +372,15 @@ code {
 }
 
 .button--primary {
-  background-color: var(--rb-base-cyan);
-  border-color: var(--rb-base-cyan);
-  color: var(--rb-rock-dark);
+  background-color: var(--ifm-button-background-color);
+  border-color: var(--ifm-button-background-color);
+  color: var(--ifm-button-color);
   font-weight: 600;
 }
 
 .button--primary:hover {
-  background-color: var(--rb-base-cyan-light);
-  border-color: var(--rb-base-cyan-light);
+  background-color: var(--ifm-color-primary-light);
+  border-color: var(--ifm-color-primary-light);
 }
 
 /* Scrollbar styling */
@@ -320,7 +390,7 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--rb-rock-dark);
+  background: var(--ifm-background-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -334,10 +404,10 @@ code {
 
 /* DocPage container background */
 .main-wrapper {
-  background-color: var(--rb-rock-dark);
+  background-color: var(--ifm-background-color);
 }
 
 .theme-doc-sidebar-container {
-  background-color: var(--rb-rock-dark);
-  border-right: 1px solid rgba(0, 148, 148, 0.1);
+  background-color: var(--ifm-background-color);
+  border-right: 1px solid var(--rb-hairline);
 }
