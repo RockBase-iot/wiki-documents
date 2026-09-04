@@ -37,6 +37,14 @@ This section collects open-source firmware and application projects officially a
 |---------|-------------|
 | [Buddy Bridge App / Claude Desktop Buddy](./hardware-buddy.md) | USB-serial desktop companion app and Claude Bluetooth API example |
 
+### ESPectre WiFi CSI Human Motion Detection
+
+| Project | Description |
+|---------|-------------|
+| [ESPectre](./espectre) | Contactless human motion detection based on ESP32 and 2.4 GHz WiFi CSI |
+| [ESPectre Implementation on NM-CYD-C5](./espectre-nm-cyd-c5) | On-screen real-time curve, touch threshold adjustment, and one-tap calibration |
+| [ESPectre × NM-CYD-C5 Usage Guide](./espectre-nm-cyd-c5-usage) | Provisioning, screen operation, Home Assistant integration, and troubleshooting |
+
 ### ESP-Claw Edge AI Agent
 
 | Project | Description |

@@ -37,6 +37,14 @@ description: RockBase IoT 开源固件与应用项目案例索引
 |------|------|
 | [Buddy Bridge App / Claude Desktop Buddy](./hardware-buddy.md) | USB 串口桌面伴侣 App 与 Claude 蓝牙 API 示例 |
 
+### ESPectre WiFi CSI 人体运动检测
+
+| 项目 | 说明 |
+|------|------|
+| [ESPectre](./espectre) | 基于 ESP32 与 2.4 GHz WiFi CSI 的无接触人体运动检测 |
+| [ESPectre 在 NM-CYD-C5 上的实现](./espectre-nm-cyd-c5) | 屏幕实时曲线、触摸门限调节与一键校准的实现方案 |
+| [ESPectre × NM-CYD-C5 使用指南](./espectre-nm-cyd-c5-usage) | 配网、屏幕操作、Home Assistant 接入与故障排查 |
+
 ### ESP-Claw 边缘 AI Agent
 
 | 项目 | 说明 |

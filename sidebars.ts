@@ -63,6 +63,15 @@ const sidebars: SidebarsConfig = {
         'projects/hardware-buddy',
         {
           type: 'category',
+          label: 'ESPectre',
+          items: [
+            'projects/espectre',
+            'projects/espectre-nm-cyd-c5',
+            'projects/espectre-nm-cyd-c5-usage',
+          ],
+        },
+        {
+          type: 'category',
           label: 'ESP-Claw',
           items: [
             'projects/esp-claw-nm-cyd-c5',
