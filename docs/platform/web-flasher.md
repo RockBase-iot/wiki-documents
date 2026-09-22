@@ -10,9 +10,10 @@ description: Flash ESP32 firmware from your browser with flash.rockbaseiot.com
 
 ## What's Supported
 
-- Official firmware for all RockBase / NMTech hardware (NM-CYD-C5, NM-TV-154, NM-EPD-420, etc.)
-- Popular community open-source projects: **Bruce**, **Marauder**, **ESP-Claw**, and more
-- Ported application firmware for the NM-EPD-420 (Meshtastic, ESP32-Dashboard, ESP32-Weather-EPD, Biscuit, etc.)
+- Official firmware for all RockBase / NMTech hardware (NM-CYD-C5, NM-TV-154, NM-EPD-420, etc.), including the official NM-EPD-420-BW reference demo firmware (nm-epd420-bw-demo)
+- Popular community open-source projects: **Bruce**, **Marauder**, **ESP-Claw**, **ESPectre** (NM-CYD-C5), and more
+- Ported application firmware for the NM-EPD-420 (Meshtastic, ESP32-Dashboard, Biscuit, **AgentDeck** — a third-party [puritysb/AgentDeck](https://github.com/puritysb/AgentDeck) build that shows AI coding agent status on the physical display, etc.)
+- **MeshCore** for the NM-EPD-420-BW, with five role firmwares: Companion Radio (BLE), Companion Radio (USB), KISS Modem, Repeater, and Room Server
 
 Firmware is maintained centrally in the [ESPWebApps](https://github.com/RockBase-iot/ESPWebApps) aggregation repository and grows continuously. If you need additional firmware packages, device support, or workflow improvements, contact the team.
 

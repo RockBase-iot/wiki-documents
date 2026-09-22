@@ -90,6 +90,9 @@ const config: Config = {
           editUrl: 'https://github.com/RockBase-iot/wiki-documents/edit/main/',
         },
         blog: false,
+        gtag: {
+          trackingID: 'G-8BKVSY73PG',
+        },
         theme: {
           customCss: [
             './src/css/custom.css',

@@ -39,7 +39,20 @@ Also included: an hourly temperature trend line with a 12-hour precipitation-pro
 - **Multilingual UI**: `en_US`, `zh_CN`
 - **Configurable units**: °C/°F, km/h/m/s/mph/kn, hPa/inHg/mmHg, km/mi, mm/in
 - **Tri-color accents** on compatible red/black/white panels
+- **Four-color panel support**: NM-EPD-420-4C (4.2″ black/white/red/yellow, GDEY0420F51) via the `nm-epd-420-4c` PlatformIO environment; the yellow channel is currently reserved for the Home page UI
+- **Home themes**: three `HomeWeatherTheme` themes — HOME-RHYTHM, HOME-ATLAS, HOME-PRINT — for the Home page on the four-color panel
+- **Calendar sync**: Google Calendar ICS feeds as a data source (see below)
 - **SNTP time sync** with configurable UTC offset
+
+## Calendar Data Source
+
+Since v1.0.0 the dashboard can sync calendar events from an ICS feed:
+
+1. In Google Calendar, open the calendar's settings and copy its **secret iCal (ICS) URL**.
+2. In the device web portal, open the `data-source` menu and paste the ICS URL into the calendar source field.
+3. Calendar pages will render events from the feed on the next refresh.
+
+`webcal://` links are normalized to HTTPS. Outlook Calendar and Apple Calendar ICS feeds follow the same mechanism but are **not fully tested** in the current release.
 
 ## Quick Start
 

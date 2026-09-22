@@ -10,9 +10,10 @@ description: 使用 flash.rockbaseiot.com 在浏览器中一键烧录 ESP32 固�
 
 ## 支持内容
 
-- RockBase IoT 全系硬件的官方固件（NM-CYD-C5、NM-TV-154、NM-EPD-420 等）
-- 社区热门开源项目：**Bruce**、**Marauder**、**ESP-Claw** 等
-- NM-EPD-420 各移植应用固件（Meshtastic、ESP32-Dashboard、ESP32-Weather-EPD、Biscuit 等）
+- RockBase IoT 全系硬件的官方固件（NM-CYD-C5、NM-TV-154、NM-EPD-420 等），含官方 NM-EPD-420-BW 参考演示固件（nm-epd420-bw-demo）
+- 社区热门开源项目：**Bruce**、**Marauder**、**ESP-Claw**、**ESPectre**（NM-CYD-C5）等
+- NM-EPD-420 各移植应用固件（Meshtastic、ESP32-Dashboard、Biscuit、**AgentDeck**——第三方 [puritysb/AgentDeck](https://github.com/puritysb/AgentDeck)，将 AI coding agent 状态显示在实体屏上，等）
+- 面向 NM-EPD-420-BW 的 **MeshCore**，提供 5 种角色固件：Companion Radio (BLE)、Companion Radio (USB)、KISS Modem、Repeater、Room Server
 
 固件由 [ESPWebApps](https://github.com/RockBase-iot/ESPWebApps) 聚合仓统一维护，持续增加。如果你需要额外的固件包、设备支持或工作流改进，欢迎联系官方团队。
 

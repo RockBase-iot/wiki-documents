@@ -42,6 +42,13 @@ The **NM-CYD-C5** is a Cheap Yellow Display development board powered by the **E
 
 ![Comparison](/img/products/compare-cyd-c5.jpg)
 
+## Hardware Versions
+
+- **NM-CYD-C5 (standard)** — on-board antenna, fully compatible with the standard CYD form factor.
+- **NM-CYD-C5-Colorful-Ant** — external-antenna version based on the Colorful special edition. It adds an IPEX 1 connector with a dual-band 2.4 GHz / 5 GHz antenna (peak gain 3.2 / 3.7 dBi AVG) for better Wi-Fi and BLE reception, suitable for users with higher wireless-performance requirements. The enclosure 3MF files are open-sourced in the [NM-CYD-C5 repository](https://github.com/RockBase-iot/NM-CYD-C5/tree/main/Documention/3-case).
+
+![NM-CYD-C5 Colorful Antenna](/img/products/nm-cyd-c5-colorful-ant.png)
+
 ## Pinout
 
 ### SPI Bus (Shared by Display, Touch, and SD Card)
@@ -67,6 +74,8 @@ The **NM-CYD-C5** is a Cheap Yellow Display development board powered by the **E
 |-------|-------|-------|-------|
 | 3.3V | IO 9 | IO 8 | GND |
 
+*Note: IO8 and IO9 are pulled up on the board via R32 and R33 — keep this in mind when connecting external I2C devices.*
+
 ### Extension IO (P1)
 
 | Pin 1 | Pin 2 | Pin 3 | Pin 4 |
@@ -78,6 +87,13 @@ The **NM-CYD-C5** is a Cheap Yellow Display development board powered by the **E
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 |---|---|---|---|---|---|---|---|---|----|----|----|
 | IO 2 | IO 6 | IO 7 | IO 10 | GND | IO 4 | IO 8 | IO 5 | IO 9 | USB D- | USB D+ | GND |
+
+### WS2812 RGB LED & LCD Backlight
+
+| Function | Pin |
+|----------|-----|
+| LCD Backlight | GPIO 25 |
+| WS2812 RGB LED | GPIO 27 |
 
 ## Quick Start
 
@@ -96,6 +112,13 @@ framework = arduino
 
 When using TFT_eSPI with the LCD, add the `TFT_eSPI_ESP32_C5.c/h` files to the Processors folder and update `TFT_eSPI.c/h` with `CONFIG_IDF_TARGET_ESP32C5`. These files can be found in the `Demos/Arduino/libraries/TFT_eSPI` directory of the [NM-CYD-C5 repository](https://github.com/RockBase-iot/NM-CYD-C5).
 
+If the colors appear inverted when using Arduino/TFT_eSPI, add the following defines to your TFT_eSPI setup (see [issue #3](https://github.com/RockBase-iot/NM-CYD-C5/issues/3)):
+
+```c
+#define TFT_INVERSION_OFF
+#define TFT_RGB_ORDER TFT_BGR
+```
+
 ### MicroPython
 
 ```bash
@@ -109,6 +132,20 @@ mpremote connect COM3 repl
 - [NMMiner](https://github.com/RockBase-iot/NMMiner)
 - [Bruce](https://github.com/BruceDevices/firmware)
 - [HaleHound-CYD](https://github.com/RockBase-iot/HaleHound-CYD)
+- [ESP32Marauder](https://github.com/RockBase-iot/ESP32Marauder)
+- [Rogue-Radar](https://github.com/RockBase-iot/Rogue-Radar-CYD) — handheld firmware combining multiple wireless and utility tools in one rotary-driven interface
+- [CYM (Cheap Yellow Monster)](https://github.com/JimGat/CYM) — portable, touchscreen-driven WiFi security toolkit
+- [Launcher](https://github.com/RockBase-iot/Launcher) — application launcher for M5Stack, Lilygo, CYD, Marauder and ESP32 devices
+- [GhostESP](https://github.com/GhostESP-Revival/GhostESP) — open-source wireless research platform (NM-CYD-C5 adaptation in progress)
+- [ESPectre](/docs/projects/espectre) — WiFi CSI motion detection, adapted for the NM-CYD-C5 (see [ESPectre × NM-CYD-C5](/docs/projects/espectre-nm-cyd-c5))
+- [ESP-Claw](https://github.com/espressif/esp-claw) — Espressif's chat-coding AI agent framework for IoT devices
+
+### Projects in Progress
+
+- [the_poom](https://github.com/RockBase-iot/the_poom) — open-source multitool platform; NM-CYD-C5 + NM-RF-HAT support in progress
+- [ESP32-KillerBee](https://github.com/RockBase-iot/ESP32-KillerBee)
+- [ESP32DualBandWardriver](https://github.com/justcallmekoko/ESP32DualBandWardriver)
+- [PorkchopS3-C5](https://github.com/Xombi3/PorkchopS3-C5)
 
 ![Supported Projects](/img/products/esp-claw.png)
 

@@ -44,7 +44,11 @@ Open the folder in VS Code with PlatformIO extension installed. Dependencies are
 ### 3. Build and flash NM-EPD-420 firmware
 
 ```bash
+# NM-EPD-420 (4.2" tri-color panel)
 pio run -e nm-display-420 -t upload
+
+# NM-EPD-420-4C (4.2" four-color panel, GDEY0420F51)
+pio run -e nm-epd-420-4c -t upload
 ```
 
 The project also packs and uploads the LittleFS web portal resources automatically.
@@ -78,6 +82,15 @@ The project also packs and uploads the LittleFS web portal resources automatical
 - Display driver is based on 4.2-inch tri-color panel (GDEY042Z98)
 - The board includes AHT20 sensor support in this project
 - IO0 is used for wake/config interaction and deep-sleep wake behavior
+
+## NM-EPD-420-4C (Four-Color Variant)
+
+The 4C variant (ESP32-S3 + 4.2-inch black/white/red/yellow panel, GDEY0420F51) is supported since firmware v1.0.1:
+
+- PlatformIO environment: `nm-epd-420-4c` — build with `pio run -e nm-epd-420-4c`
+- It runs the same Dashboard pages with the same controls and power-management flow
+- The yellow channel is currently reserved for the Home page UI
+- Three `HomeWeatherTheme` themes are available for the Home page: HOME-RHYTHM, HOME-ATLAS, HOME-PRINT
 
 ## Typical Application Scenarios
 

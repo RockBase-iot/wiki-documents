@@ -39,7 +39,20 @@ description: 免 API Key 的多页面墨水屏仪表盘固件（天气 / 时间�
 - **多语言界面**：`en_US`、`zh_CN`
 - **可配置单位**：°C/°F、km/h/m/s/mph/kn、hPa/inHg/mmHg、km/mi、mm/in
 - **三色支持**：在兼容面板上启用红/黑/白三色强调色
+- **四色面板支持**：NM-EPD-420-4C（4.2 英寸黑/白/红/黄四色屏，GDEY0420F51），使用 PlatformIO 环境 `nm-epd-420-4c`；黄色通道目前预留给 Home 页面 UI
+- **Home 主题**：新增三个 `HomeWeatherTheme` 主题——HOME-RHYTHM、HOME-ATLAS、HOME-PRINT，配合四色面板的 Home 页面使用
+- **日历同步**：支持 Google Calendar ICS 数据源（见下文）
 - **SNTP 时间同步**：UTC 偏移可配置
+
+## 日历数据源配置
+
+自 v1.0.0 起，仪表盘可通过 ICS 订阅同步日历事件：
+
+1. 在 Google 日历中打开对应日历的设置，复制其 **私密 iCal（ICS）地址**。
+2. 在设备 Web 配置门户中打开 `data-source` 菜单，将 ICS URL 填入日历数据源字段。
+3. 日历相关页面将在下次刷新时显示订阅中的日程。
+
+`webcal://` 链接会自动转换为 HTTPS。Outlook 日历和 Apple 日历的 ICS 订阅走同一机制，但在当前版本中**尚未充分测试**。
 
 ## 快速上手
 

@@ -8,6 +8,18 @@ description: RockBase IoT Wiki 文档站的内容更新记录
 
 本页记录 Wiki 文档站的内容变更。各产品的固件版本更新请查看对应 GitHub 仓库的 Releases 页面。
 
+## 2026-09-22
+
+### 新增
+- **产品**：NM-EPD-420 页面新增 NM-EPD-420-4C 四色（黑/白/红/黄，GDEY0420F51）SKU 说明；快速上手指南补充 `nm-epd-420-4c` 构建环境与 T1 测试差异
+- **项目案例**：新增 Inkstone 固件页面——RockBase IoT 自研、面向 NM-EPD-420-4C 的本地图片推送固件
+- **产品**：NM-CYD-C5 页面补充已支持/适配中项目（GhostESP、ESPectre、the_poom 等）、I2C 上拉说明（IO8/IO9）、TFT_eSPI 颜色反转修复、WS2812/背光引脚表，以及 Colorful-Ant 外置天线版
+- **项目案例**：ESP32-Dashboard 文档补充 NM-EPD-420-4C 板卡支持、三个新 HomeWeatherTheme 主题（HOME-RHYTHM / HOME-ATLAS / HOME-PRINT）与 Google 日历 ICS 同步
+- **项目案例**：NM-EPD-420 移植生态新增 nm-epd420-bw-demo、Inkstone、emini Home、AgentDeck 四个条目；MeshCore 一节补充 Web Flasher 五种角色固件；Meshtastic 一节补充 InkHUD 界面与 ES8311 音频支持
+
+### 优化
+- **平台与基础设施**：Web Flasher 支持固件清单与 ESPWebApps 线上目录同步（新增 AgentDeck、nm-epd420-bw-demo、MeshCore、ESPectre；移除已下架的 ESP32-Weather-EPD）
+
 ## 2026-08-18
 
 ### 新增

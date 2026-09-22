@@ -25,7 +25,7 @@ A complete run typically takes ~3 minutes, dominated by EPD full-refresh time (~
 | Test | Item | Description | Screen |
 |------|------|-------------|--------|
 | T0 | System startup | Serial / EPD init, welcome screen, wait USER | ![T0](/img/products/nm-epd-420/T0.png) |
-| T1 | EPD display | White / Black / Red fill + text demo | — |
+| T1 | EPD display | White / Black / Red fill + text demo (four-color SKU adds yellow fill / text) | — |
 | T2 | WS2812 RGB LED | RED → GREEN → BLUE → WHITE cycle | ![T2](/img/products/nm-epd-420/T2.png) |
 | T3 | Buttons | USER key and BOOT key press detection | — |
 | T4 | ES8311 codec | Sweep 500/1k/2k/3k Hz + *Ode to Joy* melody | ![T4](/img/products/nm-epd-420/T4.png) |
@@ -36,6 +36,8 @@ A complete run typically takes ~3 minutes, dominated by EPD full-refresh time (~
 | T9 | SD card R/W | FSPI mount + write / read-back verify | ![T9](/img/products/nm-epd-420/T9.png) |
 | T10 | LoRa SPI bus | Reset modem, check BUSY low | — |
 | T11 | Summary | Per-item PASS/FAIL/SKIP table + verdict | ![T11](/img/products/nm-epd-420/T11.png) |
+
+On the four-color SKU **NM-EPD-420-4C**, T1 checks white, black, red, and yellow full-screen fills followed by black / red / yellow text. Each full refresh takes about 25–30 seconds on this panel and partial refresh is not supported, so T1 takes noticeably longer than on the tri-color or black/white versions.
 
 ## Operator Workflow
 
@@ -76,6 +78,11 @@ pio run                                                    # build
 pio run --target upload --upload-port COM38                # flash
 pio device monitor --baud 115200                           # serial console
 ```
+
+The commands above use the default `nm-epd-420` environment (tri-color panel). For the four-color SKU **NM-EPD-420-4C**, select the `nm-epd-420-4c` build environment instead:
+
+* `pio run -e nm-epd-420-4c` — build
+* `pio run -e nm-epd-420-4c --target upload --upload-port COM38` — flash
 
 Or one-shot via VS Code tasks:
 

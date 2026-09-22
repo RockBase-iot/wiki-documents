@@ -44,7 +44,11 @@ cd ESP32-Dashboard
 ### 3. 编译并烧录 NM-EPD-420 固件
 
 ```bash
+# NM-EPD-420（4.2 英寸三色屏）
 pio run -e nm-display-420 -t upload
+
+# NM-EPD-420-4C（4.2 英寸四色屏，GDEY0420F51）
+pio run -e nm-epd-420-4c -t upload
 ```
 
 项目会自动打包并烧录 LittleFS 的 Web 配置页面资源。
@@ -78,6 +82,15 @@ pio run -e nm-display-420 -t upload
 - 显示驱动基于 4.2 英寸三色屏 GDEY042Z98
 - 项目已集成板载 AHT20 传感器支持
 - IO0 参与配置交互与深睡唤醒流程
+
+## NM-EPD-420-4C（四色版本）
+
+四色版本（ESP32-S3 + 4.2 英寸黑/白/红/黄四色屏，GDEY0420F51）自固件 v1.0.1 起获得支持：
+
+- PlatformIO 环境：`nm-epd-420-4c`，构建命令 `pio run -e nm-epd-420-4c`
+- 运行与三色版相同的 Dashboard 页面，按键操作与功耗管理流程一致
+- 黄色通道目前预留给 Home 页面 UI
+- Home 页面提供三个 `HomeWeatherTheme` 主题：HOME-RHYTHM、HOME-ATLAS、HOME-PRINT
 
 ## 典型应用场景
 

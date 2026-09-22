@@ -25,7 +25,7 @@ sidebar_position: 5
 | 测试 | 项目 | 说明 | 屏幕 |
 |------|------|------|------|
 | T0 | 系统启动 | 串口/EPD 初始化，欢迎页面，等待 USER | ![T0](/img/products/nm-epd-420/T0.png) |
-| T1 | EPD 显示 | 全白/全黑/全红 + 文本演示 | — |
+| T1 | EPD 显示 | 全白/全黑/全红 + 文本演示（四色 SKU 增加黄色填充/文字检查） | — |
 | T2 | WS2812 RGB LED | 红→绿→蓝→白循环 | ![T2](/img/products/nm-epd-420/T2.png) |
 | T3 | 按键 | USER 和 BOOT 按键检测 | — |
 | T4 | ES8311 编解码器 | 500/1k/2k/3k Hz 扫频 + 《欢乐颂》 | ![T4](/img/products/nm-epd-420/T4.png) |
@@ -36,6 +36,8 @@ sidebar_position: 5
 | T9 | SD 卡读写 | FSPI 挂载 + 写入/回读校验 | ![T9](/img/products/nm-epd-420/T9.png) |
 | T10 | LoRa SPI 总线 | 复位模组，检查 BUSY 低电平 | — |
 | T11 | 摘要 | 每项 PASS/FAIL/SKIP 汇总 | ![T11](/img/products/nm-epd-420/T11.png) |
+
+在四色 SKU **NM-EPD-420-4C** 上，T1 会依次检查全白、全黑、全红、全黄填充以及黑/红/黄文字。该面板每次全刷约 25–30 秒且不支持局部刷新，因此 T1 耗时明显长于三色和黑白版本。
 
 ## 操作流程
 
@@ -76,6 +78,11 @@ pio run                                                    # 编译
 pio run --target upload --upload-port COM38                # 烧录
 pio device monitor --baud 115200                           # 串口监视
 ```
+
+上述命令使用默认的 `nm-epd-420` 构建环境（三色面板）。四色 SKU **NM-EPD-420-4C** 请改用 `nm-epd-420-4c` 构建环境：
+
+* `pio run -e nm-epd-420-4c` —— 编译
+* `pio run -e nm-epd-420-4c --target upload --upload-port COM38` —— 烧录
 
 或通过 VS Code 任务一键执行：
 

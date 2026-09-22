@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## Overview
 
-The **NM-EPD-420** is an ESP32-S3 based 4.2-inch e-ink display development board. It is available with either a tri-color (Black / White / Red) e-paper panel or a dual-color (Black / White) e-paper panel, and features an audio codec (ES8311), environmental sensor (AHT20), RGB LED (WS2812), SD card slot, and optional LoRa modem (SX126x family) — making it ideal for low-power IoT dashboards, outdoor signage, and smart labeling applications.
+The **NM-EPD-420** is an ESP32-S3 based 4.2-inch e-ink display development board. It is available with a tri-color (Black / White / Red), dual-color (Black / White), or four-color (Black / White / Red / Yellow) e-paper panel, and features an audio codec (ES8311), environmental sensor (AHT20), RGB LED (WS2812), SD card slot, and optional LoRa modem (SX126x family) — making it ideal for low-power IoT dashboards, outdoor signage, and smart labeling applications.
 
 ![NM-EPD-420 Dashboard](/img/products/nm-epd-420/esp-dashboard.png)
 
@@ -25,14 +25,14 @@ The **NM-EPD-420** is an ESP32-S3 based 4.2-inch e-ink display development board
 
 | Item | Specification |
 |------|---------------|
-| **Panel** | GDEY042Z98 tri-color e-paper (or GYE042A87 black/white e-paper), same pinout |
+| **Panel** | GDEY042Z98 tri-color e-paper, GYE042A87 black/white e-paper, or GDEY0420F51 four-color e-paper, same pinout |
 | **Size** | 4.2 inches |
 | **Resolution** | 400 × 300 |
-| **Colors** | 3-color (Black / White / Red) or 2-color (Black / White) |
+| **Colors** | 3-color (Black / White / Red), 2-color (Black / White), or 4-color (Black / White / Red / Yellow) |
 | **Driver** | GxEPD2 |
 | **Interface** | SPI (FSPI) |
 
-The NM-EPD-420 currently supports both the tri-color panel (GDEY042Z98) and the black/white panel (GYE042A87). Their refresh performance differs as follows:
+The NM-EPD-420 currently supports the tri-color panel (GDEY042Z98), the black/white panel (GYE042A87), and the four-color panel (GDEY0420F51). Their refresh performance differs as follows:
 
 - **GDEY042Z98 Tri-color E-Paper**:
   - **SKU: NM-EPD-420**
@@ -45,6 +45,12 @@ The NM-EPD-420 currently supports both the tri-color panel (GDEY042Z98) and the 
   - Full refresh (Black / White) takes about 2–3 seconds; partial refresh is supported, with partial refresh time around 1 second.
   - For applications requiring faster content updates, the black/white panel (GYE042A87) is recommended.
   - The NM-EPD-420-BW version supports a LoRa module by default, making it more convenient for indoor desktop LoRa node applications.
+
+- **GDEY0420F51 Four-color E-Paper**:
+  - **SKU: NM-EPD-420-4C**
+  - Full refresh (Black / White / Red / Yellow) takes about 25–30 seconds; partial refresh is not supported.
+  - For applications that need more colors and do not require frequent content updates, the four-color panel (GDEY0420F51) is recommended.
+  - PlatformIO build environment: `nm-epd-420-4c`; GxEPD2 driver: `GxEPD2_420c_GDEY0420F51` (400 × 300). Unlike the tri-color and black/white panels, the four-color driver uses active-low BUSY.
 
 The LoRa version includes an HT-RA62 module (SX1262) for Meshtastic, MeshCore, and other LoRa applications. The non-LoRa version omits the module for general applications. The default NM-EPD-420-BW version supports LoRa to provide better screen refresh performance for relevant LoRa applications.
 

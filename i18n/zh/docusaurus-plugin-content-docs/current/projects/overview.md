@@ -22,6 +22,7 @@ description: RockBase IoT 开源固件与应用项目案例索引
 | 项目 | 类型 | 说明 |
 |------|------|------|
 | [Meshtastic / MeshCore / TRMNL 移植生态](./nm-epd-420-ecosystem.md) | LoRa / 内容框架 | 六大开源项目官方移植分支 |
+| [Inkstone](./inkstone-firmware.md) | 本地推图固件 | 浏览器全本地推图，双抖动算法并排预览，带 Token 鉴权的 HTTP API |
 | [Biscuit](./biscuit.md) | 多功能固件 | 阅读器变身全能智能设备，含 NM-EPD-420 双键移植 |
 
 ### 墨水屏仪表盘与气象站

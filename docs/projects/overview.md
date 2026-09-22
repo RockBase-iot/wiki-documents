@@ -22,6 +22,7 @@ This section collects open-source firmware and application projects officially a
 | Project | Type | Description |
 |---------|------|-------------|
 | [Meshtastic / MeshCore / TRMNL ports](./nm-epd-420-ecosystem.md) | LoRa / content framework | Official port branches of six open-source projects |
+| [Inkstone](./inkstone-firmware.md) | Local image-push firmware | Browser-based local push with dual dithering preview and a token-authenticated HTTP API |
 | [Biscuit](./biscuit.md) | Multi-purpose firmware | Turns an e-reader into a smart device, with a two-button NM-EPD-420 port |
 
 ### E-Ink Dashboard & Weather Station

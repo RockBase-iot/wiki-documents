@@ -1,12 +1,12 @@
 ---
 sidebar_position: 4
 title: NM-EPD-420 移植生态
-description: Meshtastic、MeshCore、TRMNL 等六大开源项目的 NM-EPD-420 官方移植
+description: Meshtastic、MeshCore、TRMNL 等十大开源项目的 NM-EPD-420 官方移植
 ---
 
 # NM-EPD-420 移植生态
 
-[NM-EPD-420](../products/nm-epd-420.md)（ESP32-S3 + 4.2" 墨水屏）已被官方移植到六大开源项目。克隆对应分支即可直接编译烧录，相关应用固件也已上架 [RockBase IoT Web Flasher](https://flash.rockbaseiot.com)。
+[NM-EPD-420](../products/nm-epd-420.md)（ESP32-S3 + 4.2" 墨水屏）已被官方移植到十大开源项目。克隆对应分支即可直接编译烧录，相关应用固件也已上架 [RockBase IoT Web Flasher](https://flash.rockbaseiot.com)。
 
 ## 已移植项目一览
 
@@ -18,10 +18,16 @@ description: Meshtastic、MeshCore、TRMNL 等六大开源项目的 NM-EPD-420 �
 | **Biscuit** | 墨水屏多功能工具 / 娱乐固件 | [biscuit@`master`](https://github.com/RockBase-iot/biscuit/tree/master) |
 | **ESP32-weather-epd** | 低功耗气象站；从 OpenWeatherMap 获取数据并显示 | [esp32-weather-epd@`main`](https://github.com/RockBase-iot/esp32-weather-epd/tree/main) |
 | **ESP32-Dashboard** | 多功能墨水屏仪表盘：天气、空气质量、室内温湿度、Web 配置门户 | [ESP32-Dashboard@`main`](https://github.com/RockBase-iot/ESP32-Dashboard/tree/main) |
+| **NM-EPD420-BW Demo** | 官方 NM-EPD-420-BW 参考演示固件，移植自 ZECTRIX NOTE4 EPD demo；演示黑白屏局部刷新/快速刷新，也可通过 Web Flasher 一键烧录 | [RockBase-iot/nm-epd420-bw-demo](https://github.com/RockBase-iot/nm-epd420-bw-demo) |
+| **Inkstone Firmware** | RockBase IoT 自研本地图片推送固件：浏览器打开 `inkstone.local` 即可选图、裁剪、双算法预览并推送上屏，另提供带 Bearer 鉴权的 HTTP API（目前支持 NM-EPD-420-4C）。详见 [Inkstone 项目介绍](./inkstone-firmware.md) | [RockBase-iot/Inkstone-firmware](https://github.com/RockBase-iot/Inkstone-firmware) |
+| **emini Home** | 四色墨水屏"一天海报"固件（天气、头条、便签、日出日落与月相、空气质量），手机浏览器即可完成配网；RockBase fork 已支持 NM-EPD-420-4C（上游 [fiedoruk/emini-home](https://github.com/fiedoruk/emini-home)，原平台为 ZECTRIX NOTE4C） | [RockBase-iot/emini-home](https://github.com/RockBase-iot/emini-home) |
+| **AgentDeck** | 第三方项目，把 AI coding agent 的状态显示在实体墨水屏上，面向 NM-EPD-420，可通过 Web Flasher 一键烧录 | [puritysb/AgentDeck](https://github.com/puritysb/AgentDeck) |
 
 ## Meshtastic 终端
 
 Meshtastic 是流行的离网 LoRa Mesh 通信项目。NM-EPD-420 的 `nm-epd-420` 分支将节点信息、消息与传感器数据呈现在 4.2 英寸墨水屏上，配合板载 SX126x 扩展座（HT-RA62 模组）即可组成一台桌面 LoRa 通信终端。
+
+NM-EPD-420-BW 版本的构建还启用了 InkHUD 界面（2026-08-17）与 ES8311 音频支持（2026-09-03）。
 
 :::info LoRa 支持说明
 标准三色版 NM-EPD-420 默认不含 LoRa 模组，面向一般桌面应用；**黑白版 NM-EPD-420-BW 默认包含 LoRa 支持**，适合作为室内桌面 LoRa 节点。
@@ -30,6 +36,8 @@ Meshtastic 是流行的离网 LoRa Mesh 通信项目。NM-EPD-420 的 `nm-epd-42
 ## MeshCore 网关
 
 MeshCore 是一种轻量级混合路由的 Mesh 分组无线协议，NM-EPD-420 可作为其低功耗 LoRa 网关节点运行，适合需要长期离网部署的场景（可搭配 [NM-Solar](../products/nm-solar.md) 太阳能供电）。
+
+[RockBase IoT Web Flasher](https://flash.rockbaseiot.com) 现已上架面向 NM-EPD-420-BW 的 MeshCore v1.17.0 固件，覆盖全部 5 种设备角色——**Companion Radio (BLE)**、**Companion Radio (USB)**、**KISS Modem**、**Repeater**、**Room Server**——均可一键烧录，无需搭建编译环境。
 
 ## TRMNL 内容框架
 
